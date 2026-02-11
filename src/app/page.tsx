@@ -1,163 +1,93 @@
-"use client";
+import Link from "next/link";
 
-import { useCallback, useMemo, useState } from "react";
-import { MOCK_ROOMS } from "@/data/rooms";
-import type { BookedSlot, EventFormData, Room } from "@/types/booking";
-import { ConfirmationPage } from "@/components/ConfirmationPage";
-import { EventForm } from "@/components/EventForm";
-import { ProgressStepper } from "@/components/ProgressStepper";
-import { RoomRecommendation } from "@/components/RoomRecommendation";
-
-const TOTAL_STEPS = 3;
-
-function getRecommendedRoom(formData: EventFormData): Room | null {
-  const { groupSize, avRequired, accessibilityRequired } = formData;
-  const filtered = MOCK_ROOMS.filter((room) => {
-    if (room.capacity < groupSize) return false;
-    if (avRequired && !room.hasAV) return false;
-    if (accessibilityRequired && !room.accessible) return false;
-    return true;
-  });
-  return filtered[0] ?? null;
-}
-
-let confirmationCounter = 1;
-function generateConfirmationNumber(): string {
-  const year = new Date().getFullYear();
-  const seq = String(confirmationCounter++).padStart(3, "0");
-  return `CONF-${year}-${seq}`;
-}
-
-const initialFormData: EventFormData = {
-  eventName: "",
-  organizerName: "",
-  preferredDate: "",
-  timeSlot: "",
-  groupSize: 0,
-  eventType: "",
-  avRequired: false,
-  accessibilityRequired: false,
-  preferredBuilding: "",
-  priorityLevel: "Medium",
-};
-
-export default function Home() {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<EventFormData>(initialFormData);
-  const [bookedSlots, setBookedSlots] = useState<BookedSlot[]>([]);
-  const [confirmationNumber, setConfirmationNumber] = useState("");
-  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
-  const [doubleBookingError, setDoubleBookingError] = useState<string | null>(null);
-
-  const recommendedRoom = useMemo(
-    () => getRecommendedRoom(formData),
-    [formData]
-  );
-
-  const handleFormSubmit = useCallback(() => {
-    setDoubleBookingError(null);
-    setStep(2);
-  }, []);
-
-  const handleSelectRoom = useCallback(() => {
-    if (!recommendedRoom) return;
-    const key = {
-      roomId: recommendedRoom.id,
-      date: formData.preferredDate,
-      timeSlot: formData.timeSlot,
-    };
-    const isBooked = bookedSlots.some(
-      (s) =>
-        s.roomId === key.roomId &&
-        s.date === key.date &&
-        s.timeSlot === key.timeSlot
-    );
-    if (isBooked) {
-      setDoubleBookingError(
-        "This room is already booked for that time."
-      );
-      return;
-    }
-    setBookedSlots((prev) => [
-      ...prev,
-      {
-        roomId: recommendedRoom.id,
-        roomName: recommendedRoom.name,
-        date: formData.preferredDate,
-        timeSlot: formData.timeSlot,
-      },
-    ]);
-    setSelectedRoom(recommendedRoom);
-    setConfirmationNumber(generateConfirmationNumber());
-    setDoubleBookingError(null);
-    setStep(3);
-  }, [recommendedRoom, formData.preferredDate, formData.timeSlot, bookedSlots]);
-
-  const handleBack = useCallback(() => {
-    setDoubleBookingError(null);
-    setStep(1);
-  }, []);
-
-  const handleBookAnother = useCallback(() => {
-    setFormData(initialFormData);
-    setSelectedRoom(null);
-    setConfirmationNumber("");
-    setStep(1);
-  }, []);
-
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-14">
-        <header className="mb-10 text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            RoomEase
+    <div className="bg-black">
+      {/* Hero */}
+      <section className="mx-auto max-w-[1200px] px-4 pt-20 pb-24 sm:px-6 sm:pt-28 sm:pb-32 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Intelligent Room Booking for the University of Waterloo
           </h1>
-          <p className="mt-2 text-gray-500">
-            University room booking
+          <p className="mt-6 text-lg leading-8 text-gray-400 sm:text-xl">
+            Automated, policy-aware room recommendations in seconds.
           </p>
-        </header>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/book"
+              className="w-full rounded-xl bg-[#FFD100] px-8 py-4 text-center text-base font-semibold text-black shadow-lg transition-all duration-150 hover:bg-[#e6bc00] hover:shadow-[#FFD100]/25 sm:w-auto"
+            >
+              Start Booking
+            </Link>
+            <a
+              href="#features"
+              className="w-full rounded-xl border border-[#2A2A2A] bg-transparent px-8 py-4 text-center text-base font-semibold text-white transition-all duration-150 hover:border-[#FFD100] hover:text-[#FFD100] sm:w-auto"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <ProgressStepper currentStep={step} totalSteps={TOTAL_STEPS} />
-
-        {step === 1 && (
-          <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
-            <h2 className="mb-6 text-xl font-semibold text-gray-900">
-              Event Information
-            </h2>
-            <EventForm
-              data={formData}
-              onChange={setFormData}
-              onSubmit={handleFormSubmit}
+      {/* Feature cards */}
+      <section
+        id="features"
+        className="border-t border-[#2A2A2A] bg-black py-20 sm:py-24"
+      >
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <FeatureCard
+              icon={
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                </svg>
+              }
+              title="Smart Matching Engine"
+              description="Capacity, AV, and accessibility constraints are applied automatically to surface the best available room for your event."
+            />
+            <FeatureCard
+              icon={
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              }
+              title="Policy-Aware Recommendations"
+              description="Recommendations respect university policies and room attributes so you book with confidence."
+            />
+            <FeatureCard
+              icon={
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              }
+              title="Availability Conflict Prevention"
+              description="Double-booking is prevented by checking room availability against existing bookings before confirmation."
             />
           </div>
-        )}
+        </div>
+      </section>
 
-        {step === 2 && (
-          <>
-            <h2 className="mb-6 text-xl font-semibold text-gray-900">
-              Recommended Room
-            </h2>
-            <RoomRecommendation
-              formData={formData}
-              recommendedRoom={recommendedRoom}
-              onSelectRoom={handleSelectRoom}
-              onBack={handleBack}
-              doubleBookingError={doubleBookingError}
-            />
-          </>
-        )}
+      {/* Footer spacing handled by Layout Footer */}
+    </div>
+  );
+}
 
-        {step === 3 && selectedRoom && (
-          <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
-            <ConfirmationPage
-              formData={formData}
-              room={selectedRoom}
-              confirmationNumber={confirmationNumber}
-              onBookAnother={handleBookAnother}
-            />
-          </div>
-        )}
+function FeatureCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-8 shadow-xl transition-all duration-200 hover:border-[#2A2A2A] hover:shadow-2xl">
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#FFD100]/30 bg-[#FFD100]/10 text-[#FFD100]">
+        {icon}
       </div>
-    </main>
+      <h3 className="mt-5 text-lg font-semibold text-white">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-gray-400">{description}</p>
+    </div>
   );
 }

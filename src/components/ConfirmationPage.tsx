@@ -18,9 +18,9 @@ export function ConfirmationPage({
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#FFD100]/20 transition-transform duration-200">
           <svg
-            className="h-10 w-10 text-emerald-600"
+            className="h-12 w-12 text-[#FFD100]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -33,10 +33,10 @@ export function ConfirmationPage({
             />
           </svg>
         </div>
-        <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl">
+        <h1 className="mt-6 text-2xl font-bold text-white sm:text-3xl">
           Room Successfully Booked
         </h1>
-        <p className="mt-2 text-gray-500">
+        <p className="mt-2 text-gray-400">
           Your booking has been confirmed.
         </p>
       </div>
@@ -51,7 +51,7 @@ export function ConfirmationPage({
         <button
           type="button"
           onClick={onBookAnother}
-          className="rounded-xl bg-emerald-600 px-8 py-3.5 font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+          className="rounded-xl bg-[#FFD100] px-8 py-3.5 font-semibold text-black shadow-lg transition-all duration-150 hover:bg-[#e6bc00] hover:shadow-[#FFD100]/25 focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-black"
         >
           Book Another Event
         </button>

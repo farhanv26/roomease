@@ -1,0 +1,514 @@
+[
+  {
+    "id": "AHS 1689|*",
+    "name": "AHS 1689",
+    "building": "*",
+    "capacity": 344,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 105|*",
+    "name": "AL 105",
+    "building": "*",
+    "capacity": 89,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 113|*D",
+    "name": "AL 113",
+    "building": "*D",
+    "capacity": 222,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 116|**SR*",
+    "name": "AL 116",
+    "building": "**SR*",
+    "capacity": 357,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 124|*",
+    "name": "AL 124",
+    "building": "*",
+    "capacity": 89,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 208|*",
+    "name": "AL 208",
+    "building": "*",
+    "capacity": 104,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 209|*",
+    "name": "AL 209",
+    "building": "*",
+    "capacity": 22,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 210|*D",
+    "name": "AL 210",
+    "building": "*D",
+    "capacity": 22,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "AL 211|*",
+    "name": "AL 211",
+    "building": "*",
+    "capacity": 104,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "B1 271|*",
+    "name": "B1 271",
+    "building": "*",
+    "capacity": 207,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "B2 350|*D",
+    "name": "B2 350",
+    "building": "*D",
+    "capacity": 48,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "CPH 1346|*D",
+    "name": "CPH 1346",
+    "building": "*D",
+    "capacity": 120,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DC 1350|*D",
+    "name": "DC 1350",
+    "building": "*D",
+    "capacity": 252,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DC 1351|Unknown",
+    "name": "DC 1351",
+    "building": "Unknown",
+    "capacity": 261,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 1501|*D",
+    "name": "DWE 1501",
+    "building": "*D",
+    "capacity": 121,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 1502|*D",
+    "name": "DWE 1502",
+    "building": "*D",
+    "capacity": 40,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 1515|*D",
+    "name": "DWE 1515",
+    "building": "*D",
+    "capacity": 48,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 2527|*D",
+    "name": "DWE 2527",
+    "building": "*D",
+    "capacity": 96,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 3516|*D",
+    "name": "DWE 3516",
+    "building": "*D",
+    "capacity": 72,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 3517|*D",
+    "name": "DWE 3517",
+    "building": "*D",
+    "capacity": 48,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 3518|**SR*D",
+    "name": "DWE 3518",
+    "building": "**SR*D",
+    "capacity": 60,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 3519|**SR*D",
+    "name": "DWE 3519",
+    "building": "**SR*D",
+    "capacity": 38,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 3522|*D",
+    "name": "DWE 3522",
+    "building": "*D",
+    "capacity": 102,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "DWE 3522A|**SR*",
+    "name": "DWE 3522A",
+    "building": "**SR*",
+    "capacity": 48,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "E2 1732|**SR*",
+    "name": "E2 1732",
+    "building": "**SR*",
+    "capacity": 84,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "E2 1736|*",
+    "name": "E2 1736",
+    "building": "*",
+    "capacity": 96,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EIT 1015|*",
+    "name": "EIT 1015",
+    "building": "*",
+    "capacity": 154,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV1 132|*",
+    "name": "EV1 132",
+    "building": "*",
+    "capacity": 49,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV1 225|*D",
+    "name": "EV1 225",
+    "building": "*D",
+    "capacity": 16,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV1 350|*",
+    "name": "EV1 350",
+    "building": "*",
+    "capacity": 50,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV2 2002|*D",
+    "name": "EV2 2002",
+    "building": "*D",
+    "capacity": 84,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3 1408|**SR*D",
+    "name": "EV3 1408",
+    "building": "**SR*D",
+    "capacity": 144,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3 3406|Unknown",
+    "name": "EV3 3406",
+    "building": "Unknown",
+    "capacity": 26,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3 3408|*D",
+    "name": "EV3 3408",
+    "building": "*D",
+    "capacity": 27,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3 3412|*D",
+    "name": "EV3 3412",
+    "building": "*D",
+    "capacity": 60,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3 4408|Unknown",
+    "name": "EV3 4408",
+    "building": "Unknown",
+    "capacity": 58,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3 4412|Unknown",
+    "name": "EV3 4412",
+    "building": "Unknown",
+    "capacity": 58,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "QNC 1502|*D",
+    "name": "QNC 1502",
+    "building": "*D",
+    "capacity": 123,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "QNC 1506|Unknown",
+    "name": "QNC 1506",
+    "building": "Unknown",
+    "capacity": 48,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "QNC 1507|*D",
+    "name": "QNC 1507",
+    "building": "*D",
+    "capacity": 48,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "QNC 2501|*D",
+    "name": "QNC 2501",
+    "building": "*D",
+    "capacity": 42,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "QNC 2502|*D",
+    "name": "QNC 2502",
+    "building": "*D",
+    "capacity": 123,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 101|Unknown",
+    "name": "RCH 101",
+    "building": "Unknown",
+    "capacity": 352,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 103|*D",
+    "name": "RCH 103",
+    "building": "*D",
+    "capacity": 120,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 105|*",
+    "name": "RCH 105",
+    "building": "*",
+    "capacity": 110,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 106|*D",
+    "name": "RCH 106",
+    "building": "*D",
+    "capacity": 32,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 109|*D",
+    "name": "RCH 109",
+    "building": "*D",
+    "capacity": 32,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 110|*D",
+    "name": "RCH 110",
+    "building": "*D",
+    "capacity": 105,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 112|*D",
+    "name": "RCH 112",
+    "building": "*D",
+    "capacity": 115,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 204|Unknown",
+    "name": "RCH 204",
+    "building": "Unknown",
+    "capacity": 68,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 205|*D",
+    "name": "RCH 205",
+    "building": "*D",
+    "capacity": 40,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 206|*D",
+    "name": "RCH 206",
+    "building": "*D",
+    "capacity": 40,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 207|*D",
+    "name": "RCH 207",
+    "building": "*D",
+    "capacity": 72,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 208|**SR*",
+    "name": "RCH 208",
+    "building": "**SR*",
+    "capacity": 30,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 209|Unknown",
+    "name": "RCH 209",
+    "building": "Unknown",
+    "capacity": 30,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 211|**SR*D",
+    "name": "RCH 211",
+    "building": "**SR*D",
+    "capacity": 108,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 212|*D",
+    "name": "RCH 212",
+    "building": "*D",
+    "capacity": 32,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 301|*D",
+    "name": "RCH 301",
+    "building": "*D",
+    "capacity": 159,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 302|*D",
+    "name": "RCH 302",
+    "building": "*D",
+    "capacity": 159,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 305|*D",
+    "name": "RCH 305",
+    "building": "*D",
+    "capacity": 84,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 306|**SR*D",
+    "name": "RCH 306",
+    "building": "**SR*D",
+    "capacity": 70,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 307|Unknown",
+    "name": "RCH 307",
+    "building": "Unknown",
+    "capacity": 112,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 308|**SR*D",
+    "name": "RCH 308",
+    "building": "**SR*D",
+    "capacity": 70,
+    "hasAV": false,
+    "accessible": false
+  },
+  {
+    "id": "RCH 309|Unknown",
+    "name": "RCH 309",
+    "building": "Unknown",
+    "capacity": 84,
+    "hasAV": false,
+    "accessible": false
+  }
+]
