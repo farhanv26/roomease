@@ -26,37 +26,38 @@ export default function RoomsDashboardPage() {
   const handleHoverEnd = useCallback(() => setHoveredRoomId(null), []);
 
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      {/* Top toolbar */}
-      <div className="mb-6 space-y-4">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="relative bg-transparent">
+      <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-8 sm:py-16 lg:px-10 bg-transparent">
+        {/* Top toolbar */}
+      <div className="mb-8 space-y-6">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h1 className="text-4xl font-bold tracking-tight text-[rgba(255,255,255,0.92)] sm:text-5xl" style={{ letterSpacing: "-0.02em" }}>
               Bookable Rooms
             </h1>
-            <p className="mt-1 text-gray-400">
+            <p className="mt-2 text-lg text-[rgba(255,255,255,0.65)]">
               Browse capacity and features across campus.
             </p>
           </div>
-        <div className="flex flex-1 flex-col gap-3 sm:max-w-xl sm:flex-row sm:items-center sm:justify-end">
+          <div className="flex flex-1 flex-col gap-3 sm:max-w-xl sm:flex-row sm:items-center sm:justify-end">
             <div className="flex flex-1 items-center gap-2">
               <input
                 type="search"
                 value={filters.state.search}
                 onChange={(e) => filters.setSearch(e.target.value)}
                 placeholder="Search by room or building..."
-                className="w-full rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] px-4 py-2.5 text-white placeholder-gray-500 focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100] sm:w-auto"
+                className="w-full rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md px-5 py-3 text-[rgba(255,255,255,0.92)] placeholder-[rgba(255,255,255,0.48)] transition-all duration-200 focus:border-[#FFD54A]/50 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 sm:w-auto"
                 style={{ minWidth: "28ch", maxWidth: "40ch" }}
                 aria-label="Search rooms"
               />
             </div>
-            <div className="grid grid-cols-[auto_auto_auto] items-center gap-2">
-              <label className="flex items-center gap-2 text-sm text-gray-500">
+            <div className="flex items-center gap-3">
+              <label className="flex items-center gap-2 text-sm text-[rgba(255,255,255,0.65)]">
                 <span>Sort</span>
                 <select
                   value={filters.state.sort}
                   onChange={(e) => filters.setSort(e.target.value as any)}
-                  className="rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-sm text-white focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+                  className="rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md px-4 py-2.5 text-sm text-[rgba(255,255,255,0.92)] transition-all duration-200 focus:border-[#FFD54A]/50 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
                 >
                   <option value="recommended">Recommended</option>
                   <option value="capacity-low">Capacity: Low → High</option>
@@ -67,24 +68,22 @@ export default function RoomsDashboardPage() {
               <button
                 type="button"
                 onClick={() => setFiltersOpen(true)}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#2A2A2A] bg-[#111111] px-4 py-2.5 text-sm font-medium text-gray-200 transition hover:border-[#FFD100]/60 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-black"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md px-5 py-2.5 text-sm font-medium text-[rgba(255,255,255,0.92)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:bg-[rgba(17,17,19,0.85)] focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
               >
                 <span>Filters</span>
                 {filters.hasActiveFilters && (
-                  <span className="text-xs text-[#FFD100]">●</span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#FFD54A]" />
                 )}
               </button>
-              <div className="flex justify-end">
-                <button
-                  type="button"
-                  onClick={filters.resetFilters}
-                  className={`rounded-xl border border-[#FFD100]/50 bg-transparent px-4 py-2.5 text-sm font-medium text-[#FFD100] transition hover:bg-[#FFD100]/10 focus:outline-none focus:ring-2 focus:ring-[#FFD100] ${
-                    filters.hasActiveFilters ? "" : "opacity-0 pointer-events-none"
-                  }`}
-                >
-                  Reset
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={filters.resetFilters}
+                className={`rounded-full border border-[rgba(255,255,255,0.08)] bg-transparent px-5 py-2.5 text-sm font-medium text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 ${
+                  filters.hasActiveFilters ? "" : "opacity-0 pointer-events-none"
+                }`}
+              >
+                Reset
+              </button>
             </div>
           </div>
         </div>
@@ -92,13 +91,13 @@ export default function RoomsDashboardPage() {
         {/* Active filter chips */}
         {filters.activeFilterPills.length > 0 && (
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-gray-500">Active:</span>
+            <span className="text-sm text-[rgba(255,255,255,0.65)]">Active:</span>
             {filters.activeFilterPills.map((pill) => (
               <button
                 key={pill.key}
                 type="button"
                 onClick={() => filters.removeFilterByKey(pill.key)}
-                className="inline-flex items-center gap-2 rounded-full border border-[#FFD100]/40 bg-[#FFD100]/10 px-3 py-1 text-xs font-medium text-[#FFD100] hover:bg-[#FFD100]/20"
+                className="inline-flex items-center gap-2 rounded-full border border-[#FFD54A]/40 bg-[#FFD54A]/10 px-3 py-1.5 text-xs font-medium text-[#FFD54A] transition-all duration-200 hover:bg-[#FFD54A]/15"
               >
                 <span>{pill.label}</span>
                 <span aria-hidden="true" className="text-[10px]">
@@ -110,23 +109,23 @@ export default function RoomsDashboardPage() {
         )}
       </div>
 
-      <p className="mb-4 text-sm text-gray-500">
+      <p className="mb-6 text-sm text-[rgba(255,255,255,0.65)]">
         Showing {finalRooms.length} of {ROOMS.length} rooms
       </p>
 
       {finalRooms.length === 0 ? (
-        <div className="rounded-xl border-2 border-dashed border-[#FFD100]/40 bg-[#1A1A1A]/50 py-16 text-center">
-          <p className="text-lg font-medium text-gray-400">No rooms match your filters.</p>
+        <div className="rounded-2xl border-2 border-dashed border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.50)] backdrop-blur-md py-20 text-center">
+          <p className="text-lg font-medium text-[rgba(255,255,255,0.65)]">No rooms match your filters.</p>
           <button
             type="button"
             onClick={filters.resetFilters}
-            className="mt-4 rounded-xl border border-[#FFD100] bg-transparent px-6 py-3 font-semibold text-[#FFD100] transition hover:bg-[#FFD100]/10 focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+            className="mt-6 rounded-full border border-[#FFD54A]/50 bg-transparent px-6 py-3 font-semibold text-[#FFD54A] transition-all duration-200 hover:bg-[#FFD54A]/10 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
           >
             Clear filters
           </button>
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {finalRooms.map((room) => (
             <RoomDashboardCard
               key={room.id}
@@ -154,7 +153,7 @@ export default function RoomsDashboardPage() {
         {filtersOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -163,7 +162,7 @@ export default function RoomsDashboardPage() {
               aria-hidden="true"
             />
             <motion.aside
-              className="fixed inset-y-0 right-0 z-50 w-full max-w-md border-l border-[#2A2A2A] bg-[#111111] p-6 shadow-2xl"
+              className="fixed inset-y-0 right-0 z-50 w-full max-w-md border-l border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.85)] backdrop-blur-xl p-8 shadow-2xl"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -172,17 +171,17 @@ export default function RoomsDashboardPage() {
               aria-modal="true"
               aria-label="Room filters"
             >
-              <div className="mb-4 flex items-center justify-between">
+              <div className="mb-6 flex items-center justify-between">
                 <div>
-                  <h2 className="text-lg font-semibold text-white">Filters</h2>
-                  <p className="text-xs text-gray-500">
+                  <h2 className="text-xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Filters</h2>
+                  <p className="mt-1 text-sm text-[rgba(255,255,255,0.65)]">
                     Refine by capacity, AV, furniture, and building.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setFiltersOpen(false)}
-                  className="rounded-full border border-[#2A2A2A] bg-[#1A1A1A] px-3 py-1 text-xs text-gray-300 hover:border-[#FFD100]/60 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+                  className="rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] px-4 py-2 text-sm text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
                 >
                   Close
                 </button>
@@ -207,6 +206,7 @@ export default function RoomsDashboardPage() {
           </>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }

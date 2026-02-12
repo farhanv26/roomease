@@ -13,9 +13,9 @@ export function Layout({ children }: LayoutProps) {
   return (
     <BookingsProvider>
       <CompareProvider>
-        <div className="flex min-h-screen flex-col bg-black">
+        <div className="flex min-h-screen flex-col relative z-10 bg-transparent">
           <Navbar />
-          <main className="flex-1">
+          <main className="flex-1 relative z-10 bg-transparent">
             <MainWithCompareSpacer>{children}</MainWithCompareSpacer>
           </main>
           <Footer />

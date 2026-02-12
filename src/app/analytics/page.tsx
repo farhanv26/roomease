@@ -18,10 +18,10 @@ import {
 import { useBookings } from "@/lib/bookingsStore";
 import { getBuildingTicketLabel } from "@/lib/buildings";
 
-const GOLD = "#FFD100";
-const GOLD_DIM = "rgba(255, 209, 0, 0.6)";
-const AXIS_STROKE = "#525252";
-const GRID_STROKE = "#2A2A2A";
+const GOLD = "#FFD54A";
+const GOLD_DIM = "rgba(255, 213, 74, 0.6)";
+const AXIS_STROKE = "rgba(255, 255, 255, 0.48)";
+const GRID_STROKE = "rgba(255, 255, 255, 0.06)";
 
 function useAnalyticsData(bookings: ReturnType<typeof useBookings>["bookings"]) {
   return useMemo(() => {
@@ -73,12 +73,12 @@ export default function AnalyticsPage() {
   const { byBuildingList, byRoomList, capacityData, trendsData } = useAnalyticsData(bookings);
 
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+    <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-8 sm:py-16 lg:px-10">
+      <div className="mb-10">
+        <h1 className="text-4xl font-bold tracking-tight text-[rgba(255,255,255,0.92)] sm:text-5xl" style={{ letterSpacing: "-0.02em" }}>
           Booking Analytics
         </h1>
-        <p className="mt-1 text-gray-400">
+        <p className="mt-2 text-lg text-[rgba(255,255,255,0.65)]">
           Most booked buildings, popular rooms, capacity distribution, and trends.
         </p>
       </div>
@@ -87,13 +87,13 @@ export default function AnalyticsPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="rounded-xl border-2 border-dashed border-[#FFD100]/40 bg-[#1A1A1A]/50 py-16 text-center"
+          className="rounded-2xl border-2 border-dashed border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.50)] backdrop-blur-md py-20 text-center"
         >
-          <p className="text-lg font-medium text-gray-400">No bookings yet</p>
-          <p className="mt-2 text-sm text-gray-500">Analytics will appear once you have bookings.</p>
+          <p className="text-lg font-medium text-[rgba(255,255,255,0.65)]">No bookings yet</p>
+          <p className="mt-2 text-sm text-[rgba(255,255,255,0.48)]">Analytics will appear once you have bookings.</p>
           <Link
             href="/book"
-            className="mt-4 inline-flex rounded-xl bg-[#FFD100] px-6 py-3 font-semibold text-black shadow-lg transition hover:bg-[#e6bc00] focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+            className="mt-6 inline-flex rounded-full bg-[#FFD54A] px-6 py-3 font-semibold text-black shadow-lg transition-all duration-200 hover:bg-[#F6C445] hover:shadow-[#FFD54A]/25 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
           >
             Book a Room
           </Link>
@@ -105,9 +105,9 @@ export default function AnalyticsPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6"
+            className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8 shadow-lg"
           >
-            <h2 className="mb-4 text-xl font-semibold text-white">Most Booked Buildings</h2>
+            <h2 className="mb-6 text-xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Most Booked Buildings</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
@@ -122,16 +122,17 @@ export default function AnalyticsPage() {
                     dataKey="name"
                     width={100}
                     stroke={AXIS_STROKE}
-                    tick={{ fill: "#a3a3a3", fontSize: 11 }}
+                    tick={{ fill: "rgba(255, 255, 255, 0.65)", fontSize: 11 }}
                     tickFormatter={(v) => (v.length > 18 ? v.slice(0, 16) + "…" : v)}
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: "#1A1A1A",
-                      border: "1px solid #2A2A2A",
-                      borderRadius: "8px",
+                      backgroundColor: "rgba(17, 17, 19, 0.85)",
+                      border: "1px solid rgba(255, 255, 255, 0.08)",
+                      borderRadius: "16px",
+                      backdropFilter: "blur(16px)",
                     }}
-                    labelStyle={{ color: "#fff" }}
+                    labelStyle={{ color: "rgba(255, 255, 255, 0.92)" }}
                     formatter={(value) => [value ?? 0, "Bookings"]}
                   />
                   <Bar dataKey="count" radius={[0, 4, 4, 0]} animationDuration={600} animationBegin={0}>
@@ -149,9 +150,9 @@ export default function AnalyticsPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6"
+            className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8 shadow-lg"
           >
-            <h2 className="mb-4 text-xl font-semibold text-white">Most Booked Rooms</h2>
+            <h2 className="mb-6 text-xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Most Booked Rooms</h2>
             <ul className="space-y-3">
               {byRoomList.map(({ roomId, roomName, building, count }, i) => (
                 <motion.li
@@ -159,17 +160,17 @@ export default function AnalyticsPage() {
                   initial={{ opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: 0.05 * i }}
-                  className="flex items-center justify-between gap-4 rounded-lg border border-[#2A2A2A] bg-[#111111] px-4 py-3"
+                  className="flex items-center justify-between gap-4 rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] px-5 py-4 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)]"
                 >
                   <div className="min-w-0">
-                    <p className="font-medium text-white truncate">{roomName}</p>
-                    <p className="text-sm text-gray-500">{getBuildingTicketLabel(building)}</p>
+                    <p className="font-medium text-[rgba(255,255,255,0.92)] truncate">{roomName}</p>
+                    <p className="text-sm text-[rgba(255,255,255,0.65)]">{getBuildingTicketLabel(building)}</p>
                   </div>
                   <div className="flex shrink-0 items-center gap-3">
-                    <span className="text-sm text-gray-500">{count} booking{count !== 1 ? "s" : ""}</span>
+                    <span className="text-sm text-[rgba(255,255,255,0.65)]">{count} booking{count !== 1 ? "s" : ""}</span>
                     <Link
                       href={`/book?roomId=${encodeURIComponent(roomId)}`}
-                      className="rounded-xl bg-[#FFD100] px-4 py-2 text-sm font-semibold text-black transition hover:bg-[#e6bc00] hover:shadow-[#FFD100]/20 focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+                      className="rounded-full bg-[#FFD54A] px-4 py-2 text-sm font-semibold text-black transition-all duration-200 hover:bg-[#F6C445] hover:shadow-[#FFD54A]/20 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
                     >
                       Book this room
                     </Link>
@@ -184,9 +185,9 @@ export default function AnalyticsPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6"
+            className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8 shadow-lg"
           >
-            <h2 className="mb-4 text-xl font-semibold text-white">Capacity Distribution</h2>
+            <h2 className="mb-6 text-xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Capacity Distribution</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
@@ -197,7 +198,7 @@ export default function AnalyticsPage() {
                   <XAxis
                     dataKey="name"
                     stroke={AXIS_STROKE}
-                    tick={{ fill: "#a3a3a3", fontSize: 11 }}
+                    tick={{ fill: "rgba(255, 255, 255, 0.65)", fontSize: 11 }}
                   />
                   <YAxis stroke={AXIS_STROKE} tick={{ fill: "#a3a3a3", fontSize: 11 }} />
                     <Tooltip
@@ -223,12 +224,12 @@ export default function AnalyticsPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6"
+            className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8 shadow-lg"
           >
-            <h2 className="mb-4 text-xl font-semibold text-white">Booking Trends</h2>
+            <h2 className="mb-6 text-xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Booking Trends</h2>
             <div className="h-64">
               {trendsData.length === 0 ? (
-                <p className="flex h-full items-center justify-center text-sm text-gray-500">No date data yet</p>
+                <p className="flex h-full items-center justify-center text-sm text-[rgba(255,255,255,0.65)]">No date data yet</p>
               ) : (
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={trendsData} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>

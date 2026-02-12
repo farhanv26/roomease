@@ -19,24 +19,24 @@ export function CompareBar() {
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="fixed bottom-0 left-0 right-0 z-40 overflow-hidden border-t border-[#2A2A2A] bg-[#1A1A1A] shadow-[0_-8px_24px_rgba(0,0,0,0.4)]"
+          className="fixed bottom-0 left-0 right-0 z-40 overflow-hidden border-t border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.85)] backdrop-blur-xl shadow-[0_-8px_32px_rgba(0,0,0,0.35)]"
         >
-          <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-4 py-4 sm:px-6">
-            <p className="text-sm font-medium text-white">
-              <span className="text-[#FFD100]">{compareIds.length}</span> room
+          <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 py-4 sm:px-8">
+            <p className="text-sm font-medium text-[rgba(255,255,255,0.92)]">
+              <span className="text-[#FFD54A]">{compareIds.length}</span> room
               {compareIds.length !== 1 ? "s" : ""} selected
             </p>
             <div className="flex gap-3">
               <button
                 type="button"
                 onClick={clearCompare}
-                className="rounded-xl border border-[#2A2A2A] bg-transparent px-4 py-2.5 text-sm font-medium text-gray-400 transition hover:border-gray-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+                className="rounded-full border border-[rgba(255,255,255,0.08)] bg-transparent px-5 py-2.5 text-sm font-medium text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/50"
               >
                 Clear
               </button>
               <Link
                 href="/compare"
-                className="rounded-xl bg-[#FFD100] px-6 py-2.5 text-sm font-semibold text-black shadow-lg transition hover:bg-[#e6bc00] focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A]"
+                className="rounded-full bg-[#FFD54A] px-6 py-2.5 text-sm font-semibold text-black shadow-lg transition-all duration-200 hover:bg-[#F6C445] hover:shadow-[#FFD54A]/25 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/50"
               >
                 Compare
               </Link>

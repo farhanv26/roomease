@@ -111,10 +111,10 @@ export function EventForm({ data, onChange, onSubmit, buildings, directBooking }
   };
 
   const inputClass =
-    "w-full rounded-xl border border-[#2A2A2A] bg-[#111111] px-4 py-3 text-white placeholder-gray-500 focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100] transition-all duration-150";
-  const labelClass = "mb-1.5 block text-sm font-medium text-gray-400";
+    "w-full rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md px-5 py-3.5 text-[rgba(255,255,255,0.92)] placeholder-[rgba(255,255,255,0.48)] focus:border-[#FFD54A]/50 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 transition-all duration-200";
+  const labelClass = "mb-2 block text-sm font-medium text-[rgba(255,255,255,0.65)]";
   const textareaClass =
-    "w-full rounded-xl border border-[#2A2A2A] bg-[#111111] px-4 py-3 text-white placeholder-gray-500 focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100] transition-all duration-150 resize-none";
+    "w-full rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md px-5 py-3.5 text-[rgba(255,255,255,0.92)] placeholder-[rgba(255,255,255,0.48)] focus:border-[#FFD54A]/50 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 transition-all duration-200 resize-none";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -138,7 +138,7 @@ export function EventForm({ data, onChange, onSubmit, buildings, directBooking }
       {/* 3. Event Duration */}
       <div>
         <p className={labelClass}>
-          Event Duration <span className="text-[#FFD100]">*</span>
+          Event Duration <span className="text-[#FFD54A]">*</span>
         </p>
         <div className="flex flex-wrap gap-2">
           {DURATION_PRESETS.map((opt) => {
@@ -151,10 +151,10 @@ export function EventForm({ data, onChange, onSubmit, buildings, directBooking }
                   setIsCustomDuration(false);
                   set("durationMinutes", opt.value);
                 }}
-                className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] ${
+                className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 ${
                   isSelected
-                    ? "border-2 border-[#FFD100] bg-[#FFD100] text-black"
-                    : "border border-[#2A2A2A] bg-[#111111] text-gray-400 hover:border-[#FFD100]/50 hover:text-white"
+                    ? "border-2 border-[#FFD54A] bg-[#FFD54A] text-black shadow-lg"
+                    : "border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] text-[rgba(255,255,255,0.65)] hover:border-[rgba(255,255,255,0.12)] hover:text-white"
                 }`}
               >
                 {opt.label}
@@ -164,26 +164,26 @@ export function EventForm({ data, onChange, onSubmit, buildings, directBooking }
           <button
             type="button"
             onClick={() => setIsCustomDuration(true)}
-            className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] ${
+            className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 ${
               isCustomDuration
-                ? "border-2 border-[#FFD100] bg-[#FFD100] text-black"
-                : "border border-[#2A2A2A] bg-[#111111] text-gray-400 hover:border-[#FFD100]/50 hover:text-white"
+                ? "border-2 border-[#FFD54A] bg-[#FFD54A] text-black shadow-lg"
+                : "border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] text-[rgba(255,255,255,0.65)] hover:border-[rgba(255,255,255,0.12)] hover:text-white"
             }`}
           >
             Custom
           </button>
         </div>
         {isCustomDuration && (
-          <div className="mt-4 overflow-hidden rounded-xl border border-[#2A2A2A] bg-[#111111] p-4 transition-all duration-200">
-            <p className="mb-3 text-sm text-gray-400">Custom duration (30 min – 6 h)</p>
+          <div className="mt-4 overflow-hidden rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-5 transition-all duration-200">
+            <p className="mb-4 text-sm text-[rgba(255,255,255,0.65)]">Custom duration (30 min – 6 h)</p>
             <div className="flex flex-wrap items-center gap-4">
               <div>
-                <label htmlFor="durHours" className="mb-1 block text-xs text-gray-500">Hours</label>
+                <label htmlFor="durHours" className="mb-1 block text-xs text-[rgba(255,255,255,0.48)]">Hours</label>
                 <select
                   id="durHours"
                   value={customHours}
                   onChange={(e) => setCustomDuration(Number(e.target.value), customMinutes)}
-                  className="rounded-lg border border-[#2A2A2A] bg-[#1A1A1A] px-3 py-2 text-white focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+                  className="rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] px-4 py-2.5 text-[rgba(255,255,255,0.92)] focus:border-[#FFD54A]/50 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 transition-all duration-200"
                 >
                   {CUSTOM_HOURS.map((h) => (
                     <option key={h} value={h}>{h}</option>
@@ -191,24 +191,24 @@ export function EventForm({ data, onChange, onSubmit, buildings, directBooking }
                 </select>
               </div>
               <div>
-                <label htmlFor="durMinutes" className="mb-1 block text-xs text-gray-500">Minutes</label>
+                <label htmlFor="durMinutes" className="mb-1 block text-xs text-[rgba(255,255,255,0.48)]">Minutes</label>
                 <select
                   id="durMinutes"
                   value={customMinutes}
                   onChange={(e) => setCustomDuration(customHours, Number(e.target.value))}
-                  className="rounded-lg border border-[#2A2A2A] bg-[#1A1A1A] px-3 py-2 text-white focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+                  className="rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] px-4 py-2.5 text-[rgba(255,255,255,0.92)] focus:border-[#FFD54A]/50 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30 transition-all duration-200"
                 >
                   {CUSTOM_MINUTES.map((m) => (
                     <option key={m} value={m}>{m}</option>
                   ))}
                 </select>
               </div>
-              <p className="text-sm text-[#FFD100]">
+              <p className="text-sm text-[#FFD54A]">
                 Custom duration: {formatDuration(durationMin)}
               </p>
             </div>
             {!durationValid && (
-              <p className="mt-2 text-xs text-red-400">
+              <p className="mt-3 text-xs text-red-400">
                 Duration must be between 30 min and 6 h.
               </p>
             )}
@@ -219,7 +219,7 @@ export function EventForm({ data, onChange, onSubmit, buildings, directBooking }
       {/* 4. Group Size */}
       <div>
         <label htmlFor="groupSize" className={labelClass}>
-          Group Size <span className="text-[#FFD100]">*</span>
+          Group Size <span className="text-[#FFD54A]">*</span>
         </label>
         <input
           id="groupSize"
