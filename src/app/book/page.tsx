@@ -2,8 +2,8 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { ROOMS, getBuildingsFromRooms } from "@/data/rooms";
-import type { BookedSlot, EventFormData, Room } from "@/types/booking";
-import { timeRangesOverlap, timeToMinutes } from "@/types/booking";
+import type { AvNeedKey, BookedSlot, EventFormData, Room } from "@/types/booking";
+import { roomAvCapable, timeRangesOverlap, timeToMinutes } from "@/types/booking";
 import { ConfirmationPage } from "@/components/ConfirmationPage";
 import { EventForm } from "@/components/EventForm";
 import { ProgressStepper } from "@/components/ProgressStepper";
@@ -12,14 +12,53 @@ import { RoomRecommendation } from "@/components/RoomRecommendation";
 const TOTAL_STEPS = 3;
 
 function getMatchingRooms(formData: EventFormData): Room[] {
-  const { groupSize, avRequired, accessibilityRequired, preferredBuilding } = formData;
-  return ROOMS.filter((room) => {
+  const {
+    groupSize,
+    preferredBuilding,
+    accessibilityRequired,
+    avNeedsEnabled,
+    avNeeds,
+  } = formData;
+
+  const needsProjectorOrHdmi =
+    avNeedsEnabled &&
+    (avNeeds.includes("projector") || avNeeds.includes("hdmi"));
+  const needsDocCameraOnly =
+    avNeedsEnabled &&
+    avNeeds.includes("docCamera") &&
+    !avNeeds.includes("projector") &&
+    !avNeeds.includes("hdmi");
+  const hasAnyAvNeed =
+    avNeedsEnabled &&
+    avNeeds.length > 0 &&
+    !avNeeds.includes("none") &&
+    avNeeds.some((n) => n !== "none");
+
+  const filtered: Room[] = ROOMS.filter((room) => {
     if (room.capacity < groupSize) return false;
-    if (avRequired && !room.hasAV) return false;
-    if (accessibilityRequired && !room.accessible) return false;
     if (preferredBuilding && preferredBuilding.trim() !== "" && room.building !== preferredBuilding) return false;
+    if (accessibilityRequired) {
+      if (room.accessible === false) return false;
+    }
+    if (needsProjectorOrHdmi && !roomAvCapable(room)) return false;
+    if (needsDocCameraOnly && !room.docCamera) return false;
     return true;
   });
+
+  if (filtered.length === 0) return [];
+
+  const score = (room: Room): number => {
+    let s = 0;
+    const capacityCloseness = room.capacity - groupSize;
+    s -= capacityCloseness;
+    if (!hasAnyAvNeed || (!needsProjectorOrHdmi && !needsDocCameraOnly)) return s;
+    if (roomAvCapable(room)) s += 10;
+    if (room.docCamera) s += 5;
+    if (needsProjectorOrHdmi && room.docCamera) s += 3;
+    return s;
+  };
+
+  return [...filtered].sort((a, b) => score(b) - score(a));
 }
 
 let confirmationCounter = 1;
@@ -36,7 +75,8 @@ const initialFormData: EventFormData = {
   groupSize: 0,
   eventType: "",
   durationMinutes: 60,
-  avRequired: false,
+  avNeedsEnabled: false,
+  avNeeds: [],
   accessibilityRequired: false,
   preferredBuilding: "",
   priorityLevel: "Medium",

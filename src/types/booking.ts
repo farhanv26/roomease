@@ -1,13 +1,22 @@
-/** Room with required fields; may have extra keys from JSON */
+/** Room from rooms.json; may have extra keys */
 export interface Room {
   id: number | string;
   name: string;
   building: string;
+  roomNumber?: string;
   capacity: number;
-  hasAV: boolean;
+  furniture?: string;
+  avCapable: boolean;
+  docCamera?: boolean;
+  rawFeatureCode?: string;
   accessible: boolean;
+  /** @deprecated use avCapable */
+  hasAV?: boolean;
   [key: string]: unknown;
 }
+
+/** AV need option: projector/hdmi => SR (avCapable); microphone => SR preference only; docCamera => D */
+export type AvNeedKey = "projector" | "hdmi" | "microphone" | "docCamera" | "none";
 
 export interface EventFormData {
   eventName: string;
@@ -18,7 +27,10 @@ export interface EventFormData {
   eventType: string;
   eventTypeCustom?: string;
   durationMinutes: number;
-  avRequired: boolean;
+  /** Toggle "I need AV / equipment" - does NOT hard-filter by itself */
+  avNeedsEnabled: boolean;
+  /** Selected AV needs; empty or ["none"] = no preference */
+  avNeeds: AvNeedKey[];
   accessibilityRequired: boolean;
   avNotes?: string;
   accessibilityNotes?: string;
@@ -50,13 +62,25 @@ export const TIME_SLOTS_30MIN: { value: string; label: string }[] = (() => {
   return out;
 })();
 
-export const DURATION_OPTIONS = [
+export const DURATION_PRESETS = [
   { value: 30, label: "30m" },
   { value: 60, label: "1h" },
   { value: 90, label: "1.5h" },
   { value: 120, label: "2h" },
   { value: 180, label: "3h" },
 ] as const;
+
+export const DURATION_CUSTOM_MIN = 30;
+export const DURATION_CUSTOM_MAX = 6 * 60;
+
+/** AV need options for "What do you need?" chip list */
+export const AV_NEED_OPTIONS: { value: AvNeedKey; label: string }[] = [
+  { value: "projector", label: "Projector / Display" },
+  { value: "hdmi", label: "HDMI / USB-C connection" },
+  { value: "microphone", label: "Microphone / Speakers" },
+  { value: "docCamera", label: "Document Camera" },
+  { value: "none", label: "No preference" },
+];
 
 export const EVENT_TYPES = [
   { value: "Study Session", label: "Study Session" },
@@ -76,13 +100,11 @@ export const PRIORITY_LEVELS = [
   { value: "High", label: "High" },
 ] as const;
 
-/** Format "09:00" -> "9:00 AM" for display */
 export function formatTimeSlot(value: string): string {
   const found = TIME_SLOTS_30MIN.find((s) => s.value === value);
   return found ? found.label : value;
 }
 
-/** Format duration minutes to display string */
 export function formatDuration(minutes: number): string {
   if (minutes < 60) return `${minutes}m`;
   const h = Math.floor(minutes / 60);
@@ -90,13 +112,11 @@ export function formatDuration(minutes: number): string {
   return m === 0 ? `${h}h` : `${h}h ${m}m`;
 }
 
-/** Convert "HH:MM" to minutes from midnight */
 export function timeToMinutes(time: string): number {
   const [h, m] = time.split(":").map(Number);
   return (h ?? 0) * 60 + (m ?? 0);
 }
 
-/** Check if two time ranges overlap (same day). All in minutes from midnight. */
 export function timeRangesOverlap(
   startA: number,
   durationA: number,
@@ -106,4 +126,9 @@ export function timeRangesOverlap(
   const endA = startA + durationA;
   const endB = startB + durationB;
   return startA < endB && startB < endA;
+}
+
+/** Room is AV-capable (SR) for matching */
+export function roomAvCapable(room: Room): boolean {
+  return room.avCapable === true || room.hasAV === true;
 }

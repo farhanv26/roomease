@@ -3,15 +3,13 @@
 import { useEffect } from "react";
 import { getRoomDetailEntries } from "@/data/rooms";
 import type { Room } from "@/types/booking";
+import { roomAvCapable } from "@/types/booking";
 
 interface RoomDetailsModalProps {
   room: Room;
   isOpen: boolean;
   onClose: () => void;
   onSelectRoom: () => void;
-  groupSize: number;
-  avRequired: boolean;
-  accessibilityRequired: boolean;
 }
 
 export function RoomDetailsModal({
@@ -19,9 +17,6 @@ export function RoomDetailsModal({
   isOpen,
   onClose,
   onSelectRoom,
-  groupSize,
-  avRequired,
-  accessibilityRequired,
 }: RoomDetailsModalProps) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -40,9 +35,8 @@ export function RoomDetailsModal({
   if (!isOpen) return null;
 
   const details = getRoomDetailEntries(room);
-  const fitsGroup = room.capacity >= groupSize;
-  const meetsAV = !avRequired || room.hasAV;
-  const meetsAccessible = !accessibilityRequired || room.accessible;
+  const avCapable = roomAvCapable(room);
+  const docCamera = room.docCamera === true;
 
   return (
     <div
@@ -76,25 +70,49 @@ export function RoomDetailsModal({
             <p className="text-sm text-gray-500">Building</p>
             <p className="text-white font-medium">{room.building}</p>
           </div>
+          {room.roomNumber && (
+            <div>
+              <p className="text-sm text-gray-500">Room number</p>
+              <p className="text-white font-medium">{room.roomNumber}</p>
+            </div>
+          )}
           <div>
             <p className="text-sm text-gray-500">Capacity</p>
             <p className="text-white font-medium">{room.capacity}</p>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {room.hasAV && (
-              <span className="inline-flex rounded-full border border-[#FFD100]/50 bg-[#FFD100]/10 px-3 py-1 text-sm font-medium text-[#FFD100]">
-                AV
-              </span>
-            )}
-            {room.accessible && (
-              <span className="inline-flex rounded-full border border-[#FFD100]/50 bg-[#FFD100]/10 px-3 py-1 text-sm font-medium text-[#FFD100]">
-                Accessible
-              </span>
-            )}
-          </div>
+          {room.furniture && (
+            <div>
+              <p className="text-sm text-gray-500">Furniture</p>
+              <p className="text-white font-medium">{room.furniture}</p>
+            </div>
+          )}
+
           <div>
-            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Details</h3>
-            {details.length > 0 ? (
+            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">AV & equipment</h3>
+            <p className="mb-2 text-xs text-gray-500">
+              SR = AV-compatible (display/projector support). D = document camera available. Asterisks (*) in source data are ignored.
+            </p>
+            <ul className="space-y-1.5 text-sm">
+              {avCapable && (
+                <li className="text-[#FFD100]">AV (SR) — display/projector support</li>
+              )}
+              {docCamera && (
+                <li className="text-[#FFD100]">Doc Cam (D) — document camera available</li>
+              )}
+              {!avCapable && !docCamera && (
+                <li className="text-gray-500">No AV features listed</li>
+              )}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-sm text-gray-500">Accessible</p>
+            <p className="text-white font-medium">{room.accessible ? "Yes" : "No"}</p>
+          </div>
+
+          {details.length > 0 && (
+            <div>
+              <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Details</h3>
               <ul className="space-y-1.5 text-sm">
                 {details.map(({ key, value }) => (
                   <li key={key} className="flex justify-between gap-2">
@@ -103,12 +121,8 @@ export function RoomDetailsModal({
                   </li>
                 ))}
               </ul>
-            ) : (
-              <p className="text-sm text-gray-500">
-                More details will be available when integrated with UW inventory.
-              </p>
-            )}
-          </div>
+            </div>
+          )}
         </div>
         <div className="border-t border-[#2A2A2A] p-4 flex gap-3">
           <button

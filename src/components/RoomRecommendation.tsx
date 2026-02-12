@@ -68,8 +68,9 @@ export function RoomRecommendation({
         <RoomCard
           room={bestMatch}
           groupSize={formData.groupSize}
-          avRequired={formData.avRequired}
-          accessibilityRequired={formData.accessibilityRequired}
+          avNeedsEnabled={formData.avNeedsEnabled ?? false}
+          avNeeds={formData.avNeeds ?? []}
+          accessibilityRequired={formData.accessibilityRequired ?? false}
           onSelect={() => onSelectRoom(bestMatch)}
           onViewDetails={() => setDetailsRoom(bestMatch)}
           isBestMatch
@@ -87,8 +88,9 @@ export function RoomRecommendation({
                 key={String(room.id)}
                 room={room}
                 groupSize={formData.groupSize}
-                avRequired={formData.avRequired}
-                accessibilityRequired={formData.accessibilityRequired}
+                avNeedsEnabled={formData.avNeedsEnabled ?? false}
+                avNeeds={formData.avNeeds ?? []}
+                accessibilityRequired={formData.accessibilityRequired ?? false}
                 onSelect={() => onSelectRoom(room)}
                 onViewDetails={() => setDetailsRoom(room)}
               />
@@ -106,9 +108,6 @@ export function RoomRecommendation({
             onSelectRoom(detailsRoom);
             setDetailsRoom(null);
           }}
-          groupSize={formData.groupSize}
-          avRequired={formData.avRequired}
-          accessibilityRequired={formData.accessibilityRequired}
         />
       )}
     </div>

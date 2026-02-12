@@ -1,7 +1,10 @@
 /**
- * Converts src/data/Bookable Rooms.xlsx (first sheet) to src/data/rooms.json
- * for use by the RoomEase frontend. Run: yarn rooms:convert
- *
+ * Converts Bookable Rooms.xlsx sheet "REG Rooms" to rooms.json.
+ * Sheet has TWO room tables side-by-side. Column layout:
+ *   Left:  STC (feature), Bldg/Room, Regular Capacity, Furniture
+ *   Right: (col 4 = feature), Bldg/Room, Regular Capacity, Furniture
+ * Furniture Legend at end is ignored.
+ * Run: yarn rooms:convert
  * Output: src/data/rooms.json
  */
 const fs = require("fs");
@@ -10,33 +13,36 @@ const XLSX = require("xlsx");
 
 const INPUT_PATH = path.join(__dirname, "../src/data/Bookable Rooms.xlsx");
 const OUTPUT_PATH = path.join(__dirname, "../src/data/rooms.json");
+const SHEET_NAME = "REG Rooms";
 
-function normalizeHeader(str) {
-  if (typeof str !== "string") return "";
-  return str.trim().toLowerCase().replace(/\s+/g, " ");
+// Column indices from inspected sheet
+const LEFT = { feature: 0, bldgRoom: 1, capacity: 2, furniture: 3 };
+const RIGHT = { feature: 4, bldgRoom: 5, capacity: 6, furniture: 7 };
+
+/**
+ * Parse "Bldg/Room" into building + roomNumber.
+ * "RCH 305" => RCH, 305; "AHS - 032A" => AHS, 032A; "AL - 009" => AL, 009
+ */
+function parseBldgRoom(val) {
+  let s = typeof val === "string" ? val.trim() : String(val ?? "").trim();
+  if (!s) return { building: "", roomNumber: "" };
+  s = s.replace(/\s*-\s*/g, " ");
+  const match = s.match(/^([A-Za-z]+)\s+(.+)$/);
+  if (match) return { building: match[1].trim(), roomNumber: match[2].trim() };
+  if (/^[A-Za-z]+$/.test(s)) return { building: s, roomNumber: "" };
+  if (/^\d/.test(s)) return { building: "", roomNumber: s };
+  return { building: s, roomNumber: "" };
 }
 
-function findColumnIndex(headers, ...candidates) {
-  for (const candidate of candidates) {
-    const idx = headers.findIndex((h) => {
-      const n = normalizeHeader(String(h));
-      return n.includes(candidate) || candidate.includes(n);
-    });
-    if (idx >= 0) return idx;
-  }
-  return -1;
-}
-
-/** Normalize Yes/No, TRUE/FALSE, 1/0, Y/N to boolean */
-function parseBool(val) {
-  if (val === true || val === 1) return true;
-  if (val === false || val === 0) return false;
-  if (typeof val === "string") {
-    const v = val.trim().toLowerCase();
-    if (v === "yes" || v === "true" || v === "y" || v === "1") return true;
-    if (v === "no" || v === "false" || v === "n" || v === "0") return false;
-  }
-  return false;
+/** SR = AV capable, D = doc camera. * ignored. */
+function parseFeatureCode(val) {
+  const raw = typeof val === "string" ? val.trim() : String(val ?? "").trim();
+  const upper = raw.toUpperCase().replace(/\*/g, "");
+  return {
+    rawFeatureCode: raw,
+    avCapable: upper.includes("SR"),
+    docCamera: upper.includes("D"),
+  };
 }
 
 function parseNumber(val) {
@@ -48,14 +54,35 @@ function parseNumber(val) {
   return 0;
 }
 
-/** Stable id: prefer existing id column, else string from name+building */
-function stableId(rowIndex, idVal, name, building) {
-  if (idVal !== undefined && idVal !== null && idVal !== "") {
-    const n = parseNumber(idVal);
-    if (n > 0) return n;
-  }
-  const str = `${name || ""}|${building || ""}`.trim() || `row-${rowIndex}`;
-  return str;
+function extractRoom(row, block) {
+  const bldgRoom = String(row[block.bldgRoom] ?? "").trim();
+  const capacity = parseNumber(row[block.capacity]);
+  if (!bldgRoom || capacity <= 0) return null;
+  const { building, roomNumber } = parseBldgRoom(bldgRoom);
+  if (!building || !roomNumber) return null;
+  const featureVal = String(row[block.feature] ?? "").trim();
+  const { rawFeatureCode, avCapable, docCamera } = parseFeatureCode(featureVal);
+  const furniture = String(row[block.furniture] ?? "").trim() || undefined;
+  return {
+    id: `${building}-${roomNumber}`,
+    name: `${building} ${roomNumber}`,
+    building,
+    roomNumber,
+    capacity,
+    furniture,
+    avCapable,
+    docCamera,
+    rawFeatureCode: rawFeatureCode || undefined,
+    accessible: false,
+  };
+}
+
+function isLegendRow(row) {
+  const str = String(row[0] ?? "").toLowerCase() + String(row[LEFT.bldgRoom] ?? "").toLowerCase();
+  if (str.includes("furniture legend") || str.includes("legend")) return true;
+  const last = row[row.length - 1];
+  if (String(last ?? "").toLowerCase().includes("=")) return true;
+  return false;
 }
 
 function run() {
@@ -65,58 +92,52 @@ function run() {
   }
 
   const workbook = XLSX.readFile(INPUT_PATH);
-  const sheetName = workbook.SheetNames[0];
-  const sheet = workbook.Sheets[sheetName];
+  if (!workbook.SheetNames.includes(SHEET_NAME)) {
+    console.error(`Sheet "${SHEET_NAME}" not found.`);
+    process.exit(1);
+  }
+
+  const sheet = workbook.Sheets[SHEET_NAME];
   const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" });
 
   if (rows.length < 2) {
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify([], null, 2));
-    console.log("No data rows; wrote empty rooms.json");
+    console.log("Total rooms found: 0");
+    console.log("Rooms written: 0");
+    console.log("Rooms skipped: 0");
     return;
   }
 
-  const headerRow = rows[0].map((h) => String(h ?? ""));
-  const idIdx = findColumnIndex(headerRow, "id");
-  const nameIdx = findColumnIndex(headerRow, "room", "name", "room name", "room name/code");
-  const buildingIdx = findColumnIndex(headerRow, "building", "bldg");
-  const capacityIdx = findColumnIndex(headerRow, "capacity", "cap", "seats");
-  const avIdx = findColumnIndex(headerRow, "av", "a/v", "audio", "visual", "has av", "av available");
-  const accessibleIdx = findColumnIndex(headerRow, "accessible", "access", "accessibility", "wheelchair");
-
-  let imported = 0;
-  let filtered = 0;
+  const seenIds = new Set();
   const rooms = [];
+  let skipped = 0;
 
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
-    const name = nameIdx >= 0 ? String(row[nameIdx] ?? "").trim() : "";
-    let building = buildingIdx >= 0 ? String(row[buildingIdx] ?? "").trim() : "";
-    const capacity = parseNumber(capacityIdx >= 0 ? row[capacityIdx] : 0);
-    const hasAV = avIdx >= 0 ? parseBool(row[avIdx]) : false;
-    const accessible = accessibleIdx >= 0 ? parseBool(row[accessibleIdx]) : false;
-
-    if (!name || capacity <= 0) {
-      filtered++;
+    if (isLegendRow(row)) {
+      skipped++;
       continue;
     }
 
-    if (!building) building = "Unknown";
-    const id = stableId(i, idIdx >= 0 ? row[idIdx] : undefined, name, building);
-
-    rooms.push({
-      id,
-      name,
-      building,
-      capacity: Number(capacity),
-      hasAV,
-      accessible,
-    });
-    imported++;
+    for (const block of [LEFT, RIGHT]) {
+      const room = extractRoom(row, block);
+      if (!room) {
+        const bldgRoom = String(row[block.bldgRoom] ?? "").trim();
+        const cap = parseNumber(row[block.capacity]);
+        if (bldgRoom || cap > 0) skipped++;
+        continue;
+      }
+      if (seenIds.has(room.id)) continue;
+      seenIds.add(room.id);
+      rooms.push(room);
+    }
   }
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(rooms, null, 2), "utf8");
-  console.log(`Imported ${imported} rooms, filtered out ${filtered} rows.`);
-  console.log(`Output: ${OUTPUT_PATH}`);
+  console.log("Total rooms found:", rooms.length + skipped);
+  console.log("Rooms written:", rooms.length);
+  console.log("Rooms skipped:", skipped);
+  console.log("Output:", OUTPUT_PATH);
 }
 
 run();
