@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { furnitureLabelsFromCodes } from "@/lib/furniture";
 import { AVAndFurnitureSections } from "@/components/AVAndFurnitureSections";
@@ -60,6 +61,8 @@ export function RoomCard({
   const { isInCompare, toggleCompare } = useCompare();
   const inCompare = isInCompare(room.id);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <motion.div
       className={`relative rounded-xl border-2 bg-[#1A1A1A] p-6 shadow-xl ${
@@ -72,38 +75,50 @@ export function RoomCard({
         transition: { duration: 0.2 },
       }}
       transition={{ duration: 0.2 }}
+      onClick={() => {
+        if (menuOpen) setMenuOpen(false);
+      }}
     >
-      {/* Compare icon + tooltip – anchored to card top-right */}
-      <div className="absolute right-4 top-4 z-20 relative inline-flex group">
-        <button
-          type="button"
-          onClick={() => toggleCompare(room.id)}
-          aria-label={inCompare ? "Remove from compare" : "Add to compare"}
-          className={`inline-flex h-9 w-9 items-center justify-center rounded-full border text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] ${
-            inCompare
-              ? "border-[#FFD100] bg-[#FFD100]/15 text-[#FFD100] shadow-[0_0_15px_rgba(255,209,0,0.35)]"
-              : "border-[#2A2A2A] bg-black/60 text-gray-300 hover:border-[#FFD100] hover:text-[#FFD100]"
-          }`}
-        >
-          <svg
-            aria-hidden="true"
-            className="h-3.5 w-3.5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+      {/* Actions menu trigger (three-dot menu) */}
+      <div className="absolute right-4 top-4 z-20">
+        <div className="relative group">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen((open) => !open);
+            }}
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-gray-300 opacity-0 transition hover:bg-[#222] hover:text-white focus:bg-[#222] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] group-hover:opacity-100"
           >
-            <rect x="4" y="7" width="8" height="8" rx="1.5" />
-            <rect x="8" y="3" width="8" height="8" rx="1.5" />
-          </svg>
-        </button>
-        <div className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 opacity-0 transition duration-150 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:translate-y-0">
-          <div className="whitespace-nowrap rounded-lg border border-neutral-700/60 bg-neutral-900/95 px-2.5 py-1.5 text-xs text-gray-200 shadow-lg backdrop-blur-sm">
-            {inCompare ? "Remove from compare" : "Add to compare"}
-          </div>
-          <div className="mx-auto mt-1 h-2 w-3 text-neutral-700/70">
-            <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true">
-              <path d="M0 0h16L8 8 0 0z" />
+            <svg
+              aria-hidden="true"
+              className="h-4 w-4"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <circle cx="4" cy="10" r="1.5" />
+              <circle cx="10" cy="10" r="1.5" />
+              <circle cx="16" cy="10" r="1.5" />
             </svg>
-          </div>
+            <span className="sr-only">Open room actions</span>
+          </button>
+          {menuOpen && (
+            <div
+              className="absolute right-0 mt-2 w-44 rounded-lg border border-[#2A2A2A] bg-[#111111] py-1 shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  toggleCompare(room.id);
+                  setMenuOpen(false);
+                }}
+                className="flex w-full items-center px-3 py-2 text-left text-sm text-gray-200 hover:bg-[#1f1f1f]"
+              >
+                {inCompare ? "Remove from compare" : "Add to compare"}
+              </button>
+            </div>
+          )}
         </div>
       </div>
       {isBestMatch && (
