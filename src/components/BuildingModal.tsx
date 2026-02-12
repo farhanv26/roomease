@@ -59,10 +59,13 @@ export function BuildingModal({
         aria-hidden="true"
       />
       <div className="relative z-10 w-full max-w-md max-h-[90vh] flex flex-col rounded-2xl border border-[#2A2A2A] bg-[#1A1A1A] shadow-2xl">
-        <div className="flex items-center justify-between border-b border-[#2A2A2A] p-4">
+        <div className="flex shrink-0 flex-col gap-1 border-b border-[#2A2A2A] p-4">
           <h2 id="building-modal-title" className="text-lg font-semibold text-white">
             Select a Building
           </h2>
+          <p className="text-sm text-gray-500">
+            Showing {buildings.length} building{buildings.length !== 1 ? "s" : ""} (from dataset)
+          </p>
           <button
             type="button"
             onClick={onClose}
@@ -83,7 +86,7 @@ export function BuildingModal({
             className="w-full rounded-xl border border-[#2A2A2A] bg-[#111111] px-4 py-3 text-white placeholder-gray-500 focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
           />
         </div>
-        <div className="flex-1 overflow-y-auto p-4">
+        <div className="min-h-0 flex-1 overflow-y-auto p-4">
           <div className="flex flex-wrap gap-2">
             {filtered.map((b) => {
               const isSelected = value === b.value;
@@ -95,7 +98,7 @@ export function BuildingModal({
                     onSelect(b.value);
                     onClose();
                   }}
-                  className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] ${
+                  className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] focus-visible:ring-2 ${
                     isSelected
                       ? "border-2 border-[#FFD100] bg-[#FFD100] text-black"
                       : "border border-[#2A2A2A] bg-[#111111] text-gray-400 hover:border-[#FFD100]/50 hover:text-white"

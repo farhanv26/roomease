@@ -19,6 +19,12 @@ export default function HomePage() {
             >
               Start Booking
             </Link>
+            <Link
+              href="/rooms"
+              className="w-full rounded-xl border border-[#FFD100] bg-transparent px-8 py-4 text-center text-base font-semibold text-[#FFD100] transition-all duration-150 hover:bg-[#FFD100]/10 sm:w-auto"
+            >
+              Browse Rooms
+            </Link>
             <a
               href="#features"
               className="w-full rounded-xl border border-[#2A2A2A] bg-transparent px-8 py-4 text-center text-base font-semibold text-white transition-all duration-150 hover:border-[#FFD100] hover:text-[#FFD100] sm:w-auto"

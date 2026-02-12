@@ -84,6 +84,18 @@
     "accessible": false
   },
   {
+    "id": "B1-271",
+    "name": "B1 271",
+    "building": "B1",
+    "roomNumber": "271",
+    "capacity": 207,
+    "furniture": "THA",
+    "avCapable": true,
+    "docCamera": true,
+    "rawFeatureCode": "**SR*D",
+    "accessible": false
+  },
+  {
     "id": "HH-345",
     "name": "HH 345",
     "building": "HH",
@@ -105,6 +117,18 @@
     "avCapable": true,
     "docCamera": true,
     "rawFeatureCode": "**SR*D",
+    "accessible": false
+  },
+  {
+    "id": "B2-350",
+    "name": "B2 350",
+    "building": "B2",
+    "roomNumber": "350",
+    "capacity": 48,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
     "accessible": false
   },
   {
@@ -468,6 +492,18 @@
     "accessible": false
   },
   {
+    "id": "E2-1732",
+    "name": "E2 1732",
+    "building": "E2",
+    "roomNumber": "1732",
+    "capacity": 84,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
     "id": "MC-4041",
     "name": "MC 4041",
     "building": "MC",
@@ -477,6 +513,18 @@
     "avCapable": true,
     "docCamera": false,
     "rawFeatureCode": "**SR*",
+    "accessible": false
+  },
+  {
+    "id": "E2-1736",
+    "name": "E2 1736",
+    "building": "E2",
+    "roomNumber": "1736",
+    "capacity": 96,
+    "furniture": "FTSC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
     "accessible": false
   },
   {
@@ -539,6 +587,18 @@
     "accessible": false
   },
   {
+    "id": "EV1-132",
+    "name": "EV1 132",
+    "building": "EV1",
+    "roomNumber": "132",
+    "capacity": 49,
+    "furniture": "FTSC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
     "id": "MC-4059",
     "name": "MC 4059",
     "building": "MC",
@@ -551,11 +611,35 @@
     "accessible": false
   },
   {
+    "id": "EV1-225",
+    "name": "EV1 225",
+    "building": "EV1",
+    "roomNumber": "225",
+    "capacity": 16,
+    "furniture": "SEM",
+    "avCapable": false,
+    "docCamera": false,
+    "rawFeatureCode": "*",
+    "accessible": false
+  },
+  {
     "id": "MC-4060",
     "name": "MC 4060",
     "building": "MC",
     "roomNumber": "4060",
     "capacity": 66,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
+    "id": "EV1-350",
+    "name": "EV1 350",
+    "building": "EV1",
+    "roomNumber": "350",
+    "capacity": 50,
     "furniture": "STC",
     "avCapable": false,
     "docCamera": true,
@@ -587,11 +671,71 @@
     "accessible": false
   },
   {
+    "id": "EV2-2002",
+    "name": "EV2 2002",
+    "building": "EV2",
+    "roomNumber": "2002",
+    "capacity": 84,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
     "id": "MC-4064",
     "name": "MC 4064",
     "building": "MC",
     "roomNumber": "4064",
     "capacity": 46,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
+    "id": "EV3-1408",
+    "name": "EV3 1408",
+    "building": "EV3",
+    "roomNumber": "1408",
+    "capacity": 144,
+    "furniture": "FTSC",
+    "avCapable": true,
+    "docCamera": true,
+    "rawFeatureCode": "**SR*D",
+    "accessible": false
+  },
+  {
+    "id": "M3-1006",
+    "name": "M3 1006",
+    "building": "M3",
+    "roomNumber": "1006",
+    "capacity": 387,
+    "furniture": "FTSC",
+    "avCapable": true,
+    "docCamera": true,
+    "rawFeatureCode": "**SR*D",
+    "accessible": false
+  },
+  {
+    "id": "EV3-3406",
+    "name": "EV3 3406",
+    "building": "EV3",
+    "roomNumber": "3406",
+    "capacity": 26,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
+    "id": "EV3-3408",
+    "name": "EV3 3408",
+    "building": "EV3",
+    "roomNumber": "3408",
+    "capacity": 27,
     "furniture": "STC",
     "avCapable": false,
     "docCamera": true,
@@ -611,11 +755,35 @@
     "accessible": false
   },
   {
+    "id": "EV3-3412",
+    "name": "EV3 3412",
+    "building": "EV3",
+    "roomNumber": "3412",
+    "capacity": 60,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
     "id": "ML-242",
     "name": "ML 242",
     "building": "ML",
     "roomNumber": "242",
     "capacity": 32,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
+    "accessible": false
+  },
+  {
+    "id": "EV3-4408",
+    "name": "EV3 4408",
+    "building": "EV3",
+    "roomNumber": "4408",
+    "capacity": 58,
     "furniture": "STC",
     "avCapable": false,
     "docCamera": true,
@@ -631,6 +799,18 @@
     "furniture": "STC",
     "avCapable": false,
     "docCamera": false,
+    "accessible": false
+  },
+  {
+    "id": "EV3-4412",
+    "name": "EV3 4412",
+    "building": "EV3",
+    "roomNumber": "4412",
+    "capacity": 58,
+    "furniture": "STC",
+    "avCapable": false,
+    "docCamera": true,
+    "rawFeatureCode": "*D",
     "accessible": false
   },
   {

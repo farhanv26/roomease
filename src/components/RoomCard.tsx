@@ -1,5 +1,6 @@
 "use client";
 
+import { formatFurniture } from "@/lib/furniture";
 import type { AvNeedKey } from "@/types/booking";
 import type { Room } from "@/types/booking";
 import { roomAvCapable } from "@/types/booking";
@@ -51,9 +52,13 @@ export function RoomCard({
         <h2 className="text-xl font-semibold text-white">{room.name}</h2>
         <p className="mt-1 text-gray-400">{room.building}</p>
       </div>
-      <p className="mb-4 text-gray-400">
+      <p className="mb-2 text-gray-400">
         Capacity: <span className="text-white font-medium">{room.capacity}</span>
       </p>
+      {room.furniture && (() => {
+        const { short } = formatFurniture(room.furniture);
+        return short ? <p className="mb-4 text-sm text-gray-500">Furniture: {short}</p> : null;
+      })()}
       <div className="mb-4 flex flex-wrap gap-2">
         {hasAV && (
           <span className="inline-flex rounded-full border border-[#FFD100]/50 bg-[#FFD100]/10 px-2.5 py-1 text-xs font-medium text-[#FFD100]">

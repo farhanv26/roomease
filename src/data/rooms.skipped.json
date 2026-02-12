@@ -1,0 +1,9317 @@
+[
+  {
+    "rawRoom": "B1 - 007",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "B2 - 013",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "CPH - 029",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "DC - 037",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "MC - 017",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "DWE - 001",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "E2 - 002",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "EIT - 039",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "EV1 - 010",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "EV2 - 034",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "EV3 - 057",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "M3 - 056",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "ML - 005",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "QNC - 050",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "OPT - 033",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "RCH - 011",
+    "side": "left",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "PAS - 030",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "PHY - 004",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "STC - 054",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "STP - 083",
+    "side": "right",
+    "reason": "capacity not a number"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "left",
+    "reason": "missing room"
+  },
+  {
+    "rawRoom": "(empty)",
+    "side": "right",
+    "reason": "missing room"
+  }
+]

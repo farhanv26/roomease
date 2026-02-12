@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useCallback, useMemo, useState } from "react";
 import { ROOMS, getBuildingsFromRooms } from "@/data/rooms";
-import type { AvNeedKey, BookedSlot, EventFormData, Room } from "@/types/booking";
+import type { BookedSlot, EventFormData, Room } from "@/types/booking";
 import { roomAvCapable, timeRangesOverlap, timeToMinutes } from "@/types/booking";
 import { ConfirmationPage } from "@/components/ConfirmationPage";
 import { EventForm } from "@/components/EventForm";
@@ -84,9 +85,14 @@ const initialFormData: EventFormData = {
 
 const buildingsList = getBuildingsFromRooms(ROOMS);
 
-export default function BookPage() {
+function BookPageContent() {
+  const searchParams = useSearchParams();
+  const buildingFromUrl = searchParams.get("building") ?? "";
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<EventFormData>(initialFormData);
+  const [formData, setFormData] = useState<EventFormData>(() => ({
+    ...initialFormData,
+    preferredBuilding: buildingFromUrl || initialFormData.preferredBuilding,
+  }));
   const [bookedSlots, setBookedSlots] = useState<BookedSlot[]>([]);
   const [confirmationNumber, setConfirmationNumber] = useState("");
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
@@ -189,5 +195,22 @@ export default function BookPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function BookPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <div className="mx-auto max-w-2xl animate-pulse rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-8">
+            <div className="h-8 w-48 rounded bg-[#2A2A2A]" />
+            <div className="mt-6 h-64 rounded bg-[#2A2A2A]" />
+          </div>
+        </div>
+      }
+    >
+      <BookPageContent />
+    </Suspense>
   );
 }
