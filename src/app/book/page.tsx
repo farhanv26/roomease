@@ -262,7 +262,7 @@ function BookPageContent() {
   }, [lockedRoom, formData, existingBookings, addBooking]);
 
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+    <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-8 sm:py-16 lg:px-10">
       <div className="mx-auto max-w-2xl">
         <ProgressStepper currentStep={step} totalSteps={totalSteps} />
 
@@ -274,22 +274,22 @@ function BookPageContent() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 12 }}
             transition={{ duration: 0.25 }}
-            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6 shadow-xl sm:p-8"
+            className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8 shadow-xl sm:p-10"
           >
-            <h2 className="mb-6 text-xl font-semibold text-white">
+            <h2 className="mb-8 text-2xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">
               {lockedRoom ? "Book This Room" : "Event Information"}
             </h2>
             {lockedRoom && (
-              <div className="mb-6 rounded-xl border border-[#FFD100]/40 bg-[#111111] p-4">
+              <div className="mb-8 rounded-2xl border border-[#FFD54A]/40 bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-5">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-[#FFD100]">Selected Room</p>
-                    <p className="mt-1 text-lg font-semibold text-white">{lockedRoom.name}</p>
-                    <p className="mt-1 text-sm text-gray-500">Capacity {lockedRoom.capacity}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#FFD54A]">Selected Room</p>
+                    <p className="mt-1 text-lg font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">{lockedRoom.name}</p>
+                    <p className="mt-1 text-sm text-[rgba(255,255,255,0.65)]">Capacity {lockedRoom.capacity}</p>
                   </div>
                   <Link
                     href="/rooms"
-                    className="rounded-xl border border-[#2A2A2A] bg-transparent px-3 py-2 text-sm font-medium text-gray-400 transition hover:border-[#FFD100]/50 hover:text-[#FFD100] focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+                    className="rounded-full border border-[rgba(255,255,255,0.08)] bg-transparent px-4 py-2 text-sm font-medium text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
                   >
                     Change room
                   </Link>
@@ -298,10 +298,10 @@ function BookPageContent() {
             )}
             {directBookingError && (
               <div
-                className="mb-6 rounded-xl border-2 border-[#FFD100]/60 bg-[#FFD100]/10 p-4"
+                className="mb-8 rounded-2xl border-2 border-[#FFD54A]/60 bg-[#FFD54A]/10 p-5"
                 role="alert"
               >
-                <p className="text-sm font-semibold text-[#FFD100]">{directBookingError}</p>
+                <p className="text-sm font-semibold text-[#FFD54A]">{directBookingError}</p>
               </div>
             )}
             <EventForm
@@ -322,20 +322,20 @@ function BookPageContent() {
             exit={{ opacity: 0, x: -12 }}
             transition={{ duration: 0.25 }}
           >
-            <h2 className="mb-6 text-xl font-semibold text-white">Room Results</h2>
+            <h2 className="mb-8 text-2xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Room Results</h2>
             {roomsLoading ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="h-40 animate-pulse rounded-xl border border-[#2A2A2A] bg-[#1A1A1A]"
+                    className="h-40 animate-pulse rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)]"
                   >
-                    <div className="p-4">
-                      <div className="h-6 w-48 rounded bg-[#2A2A2A]" />
-                      <div className="mt-3 h-4 w-32 rounded bg-[#2A2A2A]" />
+                    <div className="p-5">
+                      <div className="h-6 w-48 rounded-xl bg-[rgba(255,255,255,0.08)]" />
+                      <div className="mt-3 h-4 w-32 rounded-xl bg-[rgba(255,255,255,0.08)]" />
                       <div className="mt-4 flex gap-2">
-                        <div className="h-8 w-24 rounded-full bg-[#2A2A2A]" />
-                        <div className="h-8 w-28 rounded-full bg-[#2A2A2A]" />
+                        <div className="h-8 w-24 rounded-full bg-[rgba(255,255,255,0.08)]" />
+                        <div className="h-8 w-28 rounded-full bg-[rgba(255,255,255,0.08)]" />
                       </div>
                     </div>
                   </div>
@@ -360,7 +360,7 @@ function BookPageContent() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6 shadow-xl sm:p-8"
+            className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8 shadow-xl sm:p-10"
           >
             <ConfirmationPage
               formData={formData}
@@ -380,10 +380,10 @@ export default function BookPage() {
   return (
     <Suspense
       fallback={
-        <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-          <div className="mx-auto max-w-2xl animate-pulse rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-8">
-            <div className="h-8 w-48 rounded bg-[#2A2A2A]" />
-            <div className="mt-6 h-64 rounded bg-[#2A2A2A]" />
+        <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-8 sm:py-16 lg:px-10">
+          <div className="mx-auto max-w-2xl animate-pulse rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8">
+            <div className="h-8 w-48 rounded-xl bg-[rgba(255,255,255,0.08)]" />
+            <div className="mt-6 h-64 rounded-xl bg-[rgba(255,255,255,0.08)]" />
           </div>
         </div>
       }

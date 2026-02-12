@@ -45,22 +45,22 @@ function MiniAvailability({ room, date }: { room: Room; date: string }) {
       <p className="text-xs text-gray-500">No bookings on this date.</p>
     );
   }
-  return (
-    <div className="relative h-8 w-full rounded border border-[#2A2A2A] bg-[#111111]">
-      {dayBookings.map((b) => {
-        const left = ((timeToMinutes(b.timeSlot) - start) / total) * 100;
-        const w = ((b.durationMinutes ?? 60) / total) * 100;
-        return (
-          <div
-            key={b.id}
-            className="absolute top-1 bottom-1 rounded bg-[#FFD100]/30 border border-[#FFD100]/50"
-            style={{ left: `${Math.max(0, left)}%`, width: `${Math.min(w, 100 - left)}%` }}
-            title={`${formatTimeSlot(b.timeSlot)} – ${formatDuration(b.durationMinutes ?? 60)}`}
-          />
-        );
-      })}
-    </div>
-  );
+    return (
+      <div className="relative h-8 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)]">
+        {dayBookings.map((b) => {
+          const left = ((timeToMinutes(b.timeSlot) - start) / total) * 100;
+          const w = ((b.durationMinutes ?? 60) / total) * 100;
+          return (
+            <div
+              key={b.id}
+              className="absolute top-1 bottom-1 rounded-lg bg-[#FFD54A]/30 border border-[#FFD54A]/50"
+              style={{ left: `${Math.max(0, left)}%`, width: `${Math.min(w, 100 - left)}%` }}
+              title={`${formatTimeSlot(b.timeSlot)} – ${formatDuration(b.durationMinutes ?? 60)}`}
+            />
+          );
+        })}
+      </div>
+    );
 }
 
 function CompareColumn({
@@ -79,50 +79,50 @@ function CompareColumn({
   return (
     <motion.div
       layout
-      className="flex min-w-[280px] max-w-[320px] flex-shrink-0 flex-col rounded-2xl border border-[#FFD100]/40 bg-[#1A1A1A] overflow-hidden shadow-[0_0_0_1px_rgba(255,209,0,0.2)]"
+      className="flex min-w-[280px] max-w-[320px] flex-shrink-0 flex-col rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
     >
       {/* Sticky header */}
-      <div className="sticky top-0 z-10 border-b border-[#2A2A2A] bg-[#1A1A1A] p-5">
+      <div className="sticky top-0 z-10 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(17,17,19,0.85)] backdrop-blur-md p-6">
         <div>
-          <h3 className="text-lg font-semibold text-white">{room.name}</h3>
-          <p className="mt-1 text-sm text-gray-400">{getBuildingTicketLabel(room.building)}</p>
+          <h3 className="text-lg font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">{room.name}</h3>
+          <p className="mt-1 text-sm text-[rgba(255,255,255,0.65)]">{getBuildingTicketLabel(room.building)}</p>
         </div>
-        <div className="mt-3 flex items-baseline justify-between">
-          <span className="text-2xl font-bold text-[#FFD100]">{room.capacity}</span>
-          <span className="text-xs text-gray-500">capacity</span>
+        <div className="mt-4 flex items-baseline justify-between">
+          <span className="text-2xl font-bold text-[#FFD54A]">{room.capacity}</span>
+          <span className="text-xs text-[rgba(255,255,255,0.48)]">capacity</span>
         </div>
         <Link
           href={`/book?roomId=${encodeURIComponent(String(room.id))}`}
-          className="mt-4 block w-full rounded-xl bg-[#FFD100] py-3 text-center text-sm font-semibold text-black shadow-lg transition hover:bg-[#e6bc00] focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+          className="mt-5 block w-full rounded-full bg-[#FFD54A] py-3 text-center text-sm font-semibold text-black shadow-lg transition-all duration-200 hover:bg-[#F6C445] hover:shadow-[#FFD54A]/25 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
         >
           Book this room
         </Link>
       </div>
 
-      <div className="flex-1 space-y-6 p-5">
+      <div className="flex-1 space-y-6 p-6">
         <section className="space-y-3">
           <AVAndFurnitureSections room={room} animatedBadges={false} compact />
         </section>
         <section>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">Availability</p>
-          <p className="mb-1 text-[10px] text-gray-500">{availDate}</p>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[rgba(255,255,255,0.48)]">Availability</p>
+          <p className="mb-1 text-[10px] text-[rgba(255,255,255,0.48)]">{availDate}</p>
           <MiniAvailability room={room} date={availDate} />
         </section>
         <section>
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">Highlights</p>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[rgba(255,255,255,0.48)]">Highlights</p>
           <ul className="space-y-1">
             {notes.map((n) => (
-              <li key={n} className="text-sm text-gray-400">· {n}</li>
+              <li key={n} className="text-sm text-[rgba(255,255,255,0.65)]">· {n}</li>
             ))}
           </ul>
         </section>
         <button
           type="button"
           onClick={() => setDetailsOpen(true)}
-          className="w-full rounded-xl border border-[#2A2A2A] py-2.5 text-sm font-medium text-gray-400 transition hover:border-[#FFD100]/50 hover:text-[#FFD100]"
+          className="w-full rounded-full border border-[rgba(255,255,255,0.08)] py-2.5 text-sm font-medium text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
         >
           View full details
         </button>
@@ -171,25 +171,25 @@ export default function ComparePage() {
   if (compareRooms.length < 2) {
     const isSingle = compareRooms.length === 1;
     return (
-      <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Compare Rooms</h1>
-        <p className="mt-1 text-gray-400">
+      <div className="mx-auto max-w-[1200px] px-6 py-16 sm:px-8 sm:py-20 lg:px-10">
+        <h1 className="text-4xl font-bold tracking-tight text-[rgba(255,255,255,0.92)] sm:text-5xl" style={{ letterSpacing: "-0.02em" }}>Compare Rooms</h1>
+        <p className="mt-2 text-lg text-[rgba(255,255,255,0.65)]">
           {isSingle
             ? "Add one more room to compare side-by-side."
             : "Select 2–4 rooms from the Rooms dashboard or booking flow to compare."}
         </p>
-        <div className="mt-12 rounded-2xl border-2 border-dashed border-[#FFD100]/40 bg-[#1A1A1A]/50 py-16 text-center">
-          <p className="text-lg font-medium text-gray-400">
+        <div className="mt-12 rounded-2xl border-2 border-dashed border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.50)] backdrop-blur-md py-20 text-center">
+          <p className="text-lg font-medium text-[rgba(255,255,255,0.65)]">
             {isSingle ? "Add one more room to compare" : "Add rooms to compare"}
           </p>
-          <p className="mt-2 text-sm text-gray-500">
+          <p className="mt-2 text-sm text-[rgba(255,255,255,0.48)]">
             {isSingle
               ? "Use \"Add to compare\" on another room card, then open Compare in the bar below."
               : "Use \"Add to compare\" in the quick-view overlay on room cards, then click Compare in the bar below."}
           </p>
           <Link
             href="/rooms"
-            className="mt-6 inline-flex rounded-xl bg-[#FFD100] px-6 py-3 font-semibold text-black transition hover:bg-[#e6bc00] focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+            className="mt-6 inline-flex rounded-full bg-[#FFD54A] px-6 py-3 font-semibold text-black shadow-lg transition-all duration-200 hover:bg-[#F6C445] hover:shadow-[#FFD54A]/25 focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
           >
             {isSingle ? "Browse rooms to add" : "Browse rooms"}
           </Link>
@@ -199,24 +199,24 @@ export default function ComparePage() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
-          className="mt-12 rounded-2xl border border-[#2A2A2A] bg-[#1A1A1A] p-6"
+          className="mt-12 rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.75)] backdrop-blur-md p-8"
         >
-          <h2 className="text-lg font-semibold text-white">Most booked buildings</h2>
-          <p className="mt-1 text-sm text-gray-500">Based on your bookings.</p>
+          <h2 className="text-xl font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">Most booked buildings</h2>
+          <p className="mt-1 text-sm text-[rgba(255,255,255,0.65)]">Based on your bookings.</p>
           {mostBookedBuildings.length > 0 ? (
-            <div className="mt-4 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {mostBookedBuildings.map(({ code, count }) => (
                 <span
                   key={code}
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#FFD100]/30 bg-[#FFD100]/5 px-4 py-2.5 text-sm"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#FFD54A]/30 bg-[#FFD54A]/10 px-4 py-2.5 text-sm"
                 >
-                  <span className="font-medium text-[#FFD100]">{getBuildingTicketLabel(code)}</span>
-                  <span className="text-gray-400">{count} booking{count !== 1 ? "s" : ""}</span>
+                  <span className="font-medium text-[#FFD54A]">{getBuildingTicketLabel(code)}</span>
+                  <span className="text-[rgba(255,255,255,0.65)]">{count} booking{count !== 1 ? "s" : ""}</span>
                 </span>
               ))}
             </div>
           ) : (
-            <p className="mt-4 text-sm text-gray-500">No bookings yet. Book a room to see your most used buildings here.</p>
+            <p className="mt-4 text-sm text-[rgba(255,255,255,0.65)]">No bookings yet. Book a room to see your most used buildings here.</p>
           )}
         </motion.section>
       </div>
@@ -224,16 +224,16 @@ export default function ComparePage() {
   }
 
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-8 sm:py-16 lg:px-10">
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Compare Rooms</h1>
-          <p className="mt-1 text-gray-400">Side-by-side comparison of selected rooms.</p>
+          <h1 className="text-4xl font-bold tracking-tight text-[rgba(255,255,255,0.92)] sm:text-5xl" style={{ letterSpacing: "-0.02em" }}>Compare Rooms</h1>
+          <p className="mt-2 text-lg text-[rgba(255,255,255,0.65)]">Side-by-side comparison of selected rooms.</p>
         </div>
         <button
           type="button"
           onClick={clearCompare}
-          className="rounded-xl border border-[#2A2A2A] px-4 py-2.5 text-sm font-medium text-gray-400 transition hover:text-white"
+          className="rounded-full border border-[rgba(255,255,255,0.08)] bg-transparent px-5 py-2.5 text-sm font-medium text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
         >
           Clear all
         </button>
@@ -246,10 +246,10 @@ export default function ComparePage() {
             key={room.id}
             type="button"
             onClick={() => setMobileIndex(i)}
-            className={`shrink-0 rounded-xl border px-4 py-2.5 text-sm font-medium transition ${
+            className={`shrink-0 rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
               mobileIndex === i
-                ? "border-[#FFD100] bg-[#FFD100] text-black"
-                : "border-[#2A2A2A] text-gray-400 hover:text-white"
+                ? "border-[#FFD54A] bg-[#FFD54A] text-black shadow-lg"
+                : "border-[rgba(255,255,255,0.08)] text-[rgba(255,255,255,0.65)] hover:text-white hover:border-[rgba(255,255,255,0.12)]"
             }`}
           >
             {room.name}

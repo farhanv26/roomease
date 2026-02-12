@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 function NavLink({
   href,
@@ -15,38 +16,81 @@ function NavLink({
   return (
     <Link
       href={href}
-      className={`text-sm font-medium transition-colors ${
+      className={`text-sm font-medium transition-colors duration-200 ${
         active
-          ? "text-[#FFD100] underline decoration-[#FFD100] decoration-2 underline-offset-4"
-          : "text-gray-400 hover:text-white"
+          ? "text-white"
+          : "text-[rgba(255,255,255,0.65)] hover:text-white"
       }`}
     >
       {children}
+      {active && (
+        <span className="block h-[1px] w-full bg-white mt-1" />
+      )}
     </Link>
   );
 }
 
 export function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const isHome = pathname === "/";
   const isRooms = pathname === "/rooms";
   const isBook = pathname === "/book";
   const isBookings = pathname === "/bookings";
   const isCompare = pathname === "/compare";
   const isAnalytics = pathname === "/analytics";
+  const isAbout = pathname === "/learn-more/about";
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleLearnMoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (isHome) {
+      const element = document.getElementById("learn-more");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      router.push("/?scrollTo=learn-more");
+    }
+  };
+
+  const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (isHome) {
+      const element = document.getElementById("about");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      router.push("/?scrollTo=about");
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#2A2A2A] bg-black/95 backdrop-blur-sm transition-shadow duration-200">
-      <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header 
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        scrolled 
+          ? "bg-[rgba(17,17,19,0.85)] backdrop-blur-xl border-[rgba(255,255,255,0.08)]" 
+          : "bg-[rgba(17,17,19,0.60)] backdrop-blur-md border-[rgba(255,255,255,0.06)]"
+      }`}
+    >
+      <nav className="mx-auto flex h-14 max-w-[1200px] items-center justify-between px-6 sm:px-8 lg:px-10">
         <Link
           href="/"
-          className={`text-lg font-semibold transition-opacity hover:opacity-90 ${
-            isHome ? "text-[#FFD100]" : "text-white"
-          }`}
+          className="flex items-center gap-2 text-lg font-semibold tracking-tight transition-opacity hover:opacity-80"
         >
-          RoomEase
+          <span className="text-white">RoomEase</span>
+          <span className="h-1.5 w-1.5 rounded-full bg-[#FFD54A]" />
         </Link>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-8">
           <NavLink href="/rooms" active={isRooms}>
             Rooms
           </NavLink>
@@ -59,15 +103,33 @@ export function Navbar() {
           <NavLink href="/analytics" active={isAnalytics}>
             Analytics
           </NavLink>
-          <NavLink href="/#features" active={false}>
+          <a
+            href="#learn-more"
+            onClick={handleLearnMoreClick}
+            className="text-sm font-medium transition-colors duration-200 text-[rgba(255,255,255,0.65)] hover:text-white"
+          >
             Learn More
-          </NavLink>
+          </a>
+          <a
+            href="#about"
+            onClick={handleAboutClick}
+            className={`text-sm font-medium transition-colors duration-200 ${
+              isAbout
+                ? "text-white"
+                : "text-[rgba(255,255,255,0.65)] hover:text-white"
+            }`}
+          >
+            About Us
+            {isAbout && (
+              <span className="block h-[1px] w-full bg-white mt-1" />
+            )}
+          </a>
           <Link
             href="/book"
-            className={`rounded-xl border px-4 py-2.5 text-sm font-semibold transition-all duration-150 ${
+            className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
               isBook
-                ? "border-[#FFD100] bg-[#FFD100] text-black shadow-lg shadow-[#FFD100]/20"
-                : "border-[#FFD100] bg-[#FFD100] text-black hover:bg-[#e6bc00] hover:shadow-lg hover:shadow-[#FFD100]/20"
+                ? "bg-[#FFD54A] text-black shadow-lg shadow-[#FFD54A]/20"
+                : "bg-[#FFD54A] text-black hover:bg-[#F6C445] hover:shadow-lg hover:shadow-[#FFD54A]/25"
             }`}
           >
             Start Booking

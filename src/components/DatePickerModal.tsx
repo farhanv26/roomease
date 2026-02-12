@@ -63,17 +63,17 @@ export function DatePickerModal({
         aria-hidden="true"
       />
       <div
-        className="relative z-10 w-full max-w-sm rounded-2xl border border-[#2A2A2A] bg-[#1A1A1A] p-4 shadow-2xl"
+        className="relative z-10 w-full max-w-sm rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[rgba(17,17,19,0.85)] backdrop-blur-xl p-6 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between border-b border-[#2A2A2A] pb-3 mb-3">
-          <h2 id="date-picker-title" className="text-lg font-semibold text-white">
+        <div className="flex items-center justify-between border-b border-[rgba(255,255,255,0.06)] pb-4 mb-4">
+          <h2 id="date-picker-title" className="text-lg font-semibold tracking-tight text-[rgba(255,255,255,0.92)]">
             Select date
           </h2>
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-2 text-gray-400 transition hover:bg-[#2A2A2A] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+            className="rounded-full p-2 text-[rgba(255,255,255,0.65)] transition-all duration-200 hover:bg-[rgba(255,255,255,0.06)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD54A]/30"
             aria-label="Close"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -82,8 +82,8 @@ export function DatePickerModal({
           </button>
         </div>
         <div
-          className="rdp-root mx-auto [--rdp-accent-color:#FFD100] [--rdp-accent-background-color:rgba(255,209,0,0.2)] [--rdp-today-color:#FFD100]"
-          style={{ color: "#e5e7eb" }}
+          className="rdp-root mx-auto [--rdp-accent-color:#FFD54A] [--rdp-accent-background-color:rgba(255,213,74,0.2)] [--rdp-today-color:#FFD54A]"
+          style={{ color: "rgba(255, 255, 255, 0.92)" }}
         >
           <DayPicker
             mode="single"
