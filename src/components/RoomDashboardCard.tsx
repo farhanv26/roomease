@@ -32,7 +32,10 @@ export function RoomDashboardCard({
   const inCompare = isInCompare(room.id);
 
   const handleMouseEnter = useCallback(() => onHoverStart?.(), [onHoverStart]);
-  const handleMouseLeave = useCallback(() => onHoverEnd?.(), [onHoverEnd]);
+  const handleMouseLeave = useCallback(() => {
+    onHoverEnd?.();
+    setQuickViewOpen(false);
+  }, [onHoverEnd]);
 
   const [shouldPulseCompareIcon, setShouldPulseCompareIcon] = useState(false);
 
@@ -154,7 +157,53 @@ export function RoomDashboardCard({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
             >
-              <div className="pointer-events-auto flex h-full flex-col justify-between">
+              <div
+                className="pointer-events-auto relative flex h-full flex-col justify-between"
+                onClick={() => setQuickViewOpen(false)}
+              >
+                {/* Actions menu trigger (three-dot menu) */}
+                <div className="absolute right-3 top-3 z-20">
+                  <div className="relative group">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setQuickViewOpen(true);
+                      }}
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-gray-300 hover:bg-[#222] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-black"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="h-4 w-4"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <circle cx="4" cy="10" r="1.5" />
+                        <circle cx="10" cy="10" r="1.5" />
+                        <circle cx="16" cy="10" r="1.5" />
+                      </svg>
+                      <span className="sr-only">Open room actions</span>
+                    </button>
+                    {quickViewOpen && (
+                      <div
+                        className="absolute right-0 mt-2 w-40 rounded-lg border border-[#2A2A2A] bg-[#111111] py-1 shadow-xl"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <button
+                          type="button"
+                          onClick={() => {
+                            toggleCompare(room.id);
+                            setQuickViewOpen(false);
+                          }}
+                          className="flex w-full items-center px-3 py-2 text-left text-sm text-gray-200 hover:bg-[#1f1f1f]"
+                        >
+                          {inCompare ? "Remove from compare" : "Add to compare"}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
                 {/* Meta + badges */}
                 <div>
                   <p className="text-lg font-semibold text-white pr-10">{room.name}</p>
@@ -176,42 +225,6 @@ export function RoomDashboardCard({
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Compare icon + tooltip – anchored to card top-right, independent of layout */}
-        {showOverlay && (
-          <div className="absolute right-3 top-3 z-20 relative inline-flex group">
-            <button
-              type="button"
-              onClick={() => toggleCompare(room.id)}
-              aria-label={inCompare ? "Remove from compare" : "Add to compare"}
-              className={`inline-flex h-9 w-9 items-center justify-center rounded-full border text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-black ${
-                inCompare
-                  ? "border-[#FFD100] bg-[#FFD100]/15 text-[#FFD100] shadow-[0_0_15px_rgba(255,209,0,0.35)]"
-                  : "border-[#2A2A2A] bg-black/60 text-gray-300 hover:border-[#FFD100] hover:text-[#FFD100]"
-              } ${shouldPulseCompareIcon ? "animate-pulse" : ""}`}
-            >
-              <svg
-                aria-hidden="true"
-                className="h-3.5 w-3.5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <rect x="4" y="7" width="8" height="8" rx="1.5" />
-                <rect x="8" y="3" width="8" height="8" rx="1.5" />
-              </svg>
-            </button>
-            <div className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 translate-y-1 scale-95 opacity-0 transition duration-150 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:translate-y-0">
-              <div className="whitespace-nowrap rounded-lg border border-neutral-700/60 bg-neutral-900/95 px-2.5 py-1.5 text-xs text-gray-200 shadow-lg backdrop-blur-sm">
-                {inCompare ? "Remove from compare" : "Add to compare"}
-              </div>
-              <div className="mx-auto mt-1 h-2 w-3 text-neutral-700/70">
-                <svg viewBox="0 0 16 8" fill="currentColor" aria-hidden="true">
-                  <path d="M0 0h16L8 8 0 0z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Mobile only: Quick view pill — no other buttons on base card */}
         <div className="mt-4 pt-4 border-t border-[#2A2A2A] sm:hidden">

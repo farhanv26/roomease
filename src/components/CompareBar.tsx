@@ -8,8 +8,8 @@ import { useCompare } from "@/lib/compareStore";
 export function CompareBar() {
   const { compareIds, clearCompare } = useCompare();
   const pathname = usePathname();
-  const onComparePage = pathname === "/compare";
-  const show = compareIds.length >= 2 && !onComparePage;
+  const showOnRoomsPage = pathname === "/rooms";
+  const show = compareIds.length >= 2 && showOnRoomsPage;
 
   return (
     <AnimatePresence>

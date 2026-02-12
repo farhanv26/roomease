@@ -79,9 +79,7 @@ function CompareColumn({
   return (
     <motion.div
       layout
-      className={`flex min-w-[280px] max-w-[320px] flex-shrink-0 flex-col rounded-2xl border bg-[#1A1A1A] overflow-hidden ${
-        isHighestCapacity ? "border-[#FFD100]/40 shadow-[0_0_0_1px_rgba(255,209,0,0.2)]" : "border-[#2A2A2A]"
-      }`}
+      className="flex min-w-[280px] max-w-[320px] flex-shrink-0 flex-col rounded-2xl border border-[#FFD100]/40 bg-[#1A1A1A] overflow-hidden shadow-[0_0_0_1px_rgba(255,209,0,0.2)]"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
