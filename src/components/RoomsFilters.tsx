@@ -1,32 +1,55 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { BuildingModal } from "@/components/BuildingModal";
+import { FURNITURE_LABELS } from "@/lib/furniture";
 import { getBuildingsFromRooms, ROOMS } from "@/data/rooms";
+import { getBuildingTicketLabel } from "@/lib/buildings";
 import type { Room } from "@/types/booking";
-import { roomAvCapable } from "@/types/booking";
+import {
+  roomHasDocumentCamera,
+  roomIsElectronicClassroom,
+  roomIsStreamingRecordingCapable,
+} from "@/types/booking";
+import { furnitureLabelsFromCodes } from "@/lib/furniture";
 
 export type SortOption = "recommended" | "capacity-low" | "capacity-high" | "name-az";
+
+export type CapacityBucket = "small" | "medium" | "large";
 
 export interface RoomsFilterState {
   search: string;
   building: string;
-  minCapacity: number;
-  avOnly: boolean;
+  /** Capacity filter: Small (0–50), Medium (51–150), Large (151+). Empty = show all; OR logic when multiple selected. */
+  capacityBuckets: CapacityBucket[];
+  streamingOnly: boolean;
+  electronicOnly: boolean;
   docCamOnly: boolean;
+  furnitureSelected: string[];
   sort: SortOption;
 }
 
 const defaultFilters: RoomsFilterState = {
   search: "",
   building: "",
-  minCapacity: 0,
-  avOnly: false,
+  capacityBuckets: [],
+  streamingOnly: false,
+  electronicOnly: false,
   docCamOnly: false,
+  furnitureSelected: [],
   sort: "recommended",
 };
 
+function roomInCapacityBucket(room: Room, bucket: CapacityBucket): boolean {
+  const cap = room.capacity;
+  if (bucket === "small") return cap <= 50;
+  if (bucket === "medium") return cap >= 51 && cap <= 150;
+  return cap >= 151;
+}
+
 const buildingsList = getBuildingsFromRooms(ROOMS);
+const FURNITURE_OPTIONS = Object.values(FURNITURE_LABELS);
 
 export function useRoomsFilters() {
   const [state, setState] = useState<RoomsFilterState>(defaultFilters);
@@ -34,37 +57,123 @@ export function useRoomsFilters() {
 
   const setSearch = useCallback((search: string) => setState((s) => ({ ...s, search })), []);
   const setBuilding = useCallback((building: string) => setState((s) => ({ ...s, building })), []);
-  const setMinCapacity = useCallback((minCapacity: number) => setState((s) => ({ ...s, minCapacity })), []);
-  const setAvOnly = useCallback((avOnly: boolean) => setState((s) => ({ ...s, avOnly })), []);
+  const toggleCapacityBucket = useCallback((bucket: CapacityBucket) => {
+    setState((s) => ({
+      ...s,
+      capacityBuckets: s.capacityBuckets.includes(bucket)
+        ? s.capacityBuckets.filter((b) => b !== bucket)
+        : [...s.capacityBuckets, bucket],
+    }));
+  }, []);
+  const setStreamingOnly = useCallback((streamingOnly: boolean) => setState((s) => ({ ...s, streamingOnly })), []);
+  const setElectronicOnly = useCallback((electronicOnly: boolean) => setState((s) => ({ ...s, electronicOnly })), []);
   const setDocCamOnly = useCallback((docCamOnly: boolean) => setState((s) => ({ ...s, docCamOnly })), []);
   const setSort = useCallback((sort: SortOption) => setState((s) => ({ ...s, sort })), []);
+
+  const toggleFurniture = useCallback((label: string) => {
+    setState((s) => ({
+      ...s,
+      furnitureSelected: s.furnitureSelected.includes(label)
+        ? s.furnitureSelected.filter((l) => l !== label)
+        : [...s.furnitureSelected, label],
+    }));
+  }, []);
 
   const hasActiveFilters = useMemo(() => {
     return (
       state.search !== defaultFilters.search ||
       state.building !== defaultFilters.building ||
-      state.minCapacity !== defaultFilters.minCapacity ||
-      state.avOnly !== defaultFilters.avOnly ||
+      state.capacityBuckets.length !== 0 ||
+      state.streamingOnly !== defaultFilters.streamingOnly ||
+      state.electronicOnly !== defaultFilters.electronicOnly ||
       state.docCamOnly !== defaultFilters.docCamOnly ||
+      state.furnitureSelected.length !== 0 ||
       state.sort !== defaultFilters.sort
     );
   }, [state]);
 
-  const resetFilters = useCallback(() => setState(defaultFilters), []);
+  const resetFilters = useCallback(
+    () => setState(() => ({ ...defaultFilters })),
+    []
+  );
+
+  const activeFilterPills = useMemo(() => {
+    const pills: { key: string; label: string }[] = [];
+    if (state.building) {
+      pills.push({
+        key: "building",
+        label: `Building: ${getBuildingTicketLabel(state.building)}`,
+      });
+    }
+    state.capacityBuckets.forEach((b) => {
+      const labels: Record<CapacityBucket, string> = {
+        small: "Small (0–50)",
+        medium: "Medium (51–150)",
+        large: "Large (151+)",
+      };
+      pills.push({ key: `capacity-${b}`, label: labels[b] });
+    });
+    if (state.streamingOnly) pills.push({ key: "streaming", label: "Streaming & Recording" });
+    if (state.electronicOnly) pills.push({ key: "electronic", label: "Electronic Classroom" });
+    if (state.docCamOnly) pills.push({ key: "doccam", label: "Document Camera" });
+    state.furnitureSelected.forEach((f) => {
+      pills.push({ key: `furniture-${f}`, label: f });
+    });
+    if (state.sort !== "recommended") {
+      const sortLabels: Record<SortOption, string> = {
+        recommended: "",
+        "capacity-low": "Capacity: Low → High",
+        "capacity-high": "Capacity: High → Low",
+        "name-az": "Name: A → Z",
+      };
+      if (sortLabels[state.sort]) pills.push({ key: "sort", label: sortLabels[state.sort] });
+    }
+    return pills;
+  }, [state]);
+
+  const removeFilterByKey = useCallback((key: string) => {
+    setState((s) => {
+      if (key === "building") return { ...s, building: "" };
+      if (key === "streaming") return { ...s, streamingOnly: false };
+      if (key === "electronic") return { ...s, electronicOnly: false };
+      if (key === "doccam") return { ...s, docCamOnly: false };
+      if (key === "sort") return { ...s, sort: "recommended" };
+      if (key.startsWith("capacity-")) {
+        const bucket = key.replace("capacity-", "") as CapacityBucket;
+        return {
+          ...s,
+          capacityBuckets: s.capacityBuckets.filter((b) => b !== bucket),
+        };
+      }
+      if (key.startsWith("furniture-")) {
+        const label = key.replace("furniture-", "");
+        return {
+          ...s,
+          furnitureSelected: s.furnitureSelected.filter((f) => f !== label),
+        };
+      }
+      return s;
+    });
+  }, []);
 
   return {
     state,
     setSearch,
     setBuilding,
-    setMinCapacity,
-    setAvOnly,
+    toggleCapacityBucket,
+    setStreamingOnly,
+    setElectronicOnly,
     setDocCamOnly,
+    setFurnitureSelected: (labels: string[]) => setState((s) => ({ ...s, furnitureSelected: labels })),
+    toggleFurniture,
     setSort,
     hasActiveFilters,
     resetFilters,
+    removeFilterByKey,
     buildingModalOpen,
     setBuildingModalOpen,
     buildingsList,
+    activeFilterPills,
   };
 }
 
@@ -92,11 +201,23 @@ function sortRooms(rooms: Room[], sort: SortOption): Room[] {
 
 export function filterAndSortRooms(rooms: Room[], state: RoomsFilterState): Room[] {
   const q = state.search.trim().toLowerCase();
+  const furnitureSet = new Set(state.furnitureSelected);
+  const capacityBuckets = state.capacityBuckets;
   let filtered = rooms.filter((room) => {
     if (state.building && room.building !== state.building) return false;
-    if (room.capacity < state.minCapacity) return false;
-    if (state.avOnly && !roomAvCapable(room)) return false;
-    if (state.docCamOnly && !room.docCamera) return false;
+    if (capacityBuckets.length > 0) {
+      const inAny = capacityBuckets.some((b) => roomInCapacityBucket(room, b));
+      if (!inAny) return false;
+    }
+    if (state.streamingOnly && !roomIsStreamingRecordingCapable(room)) return false;
+    if (state.electronicOnly && !roomIsElectronicClassroom(room)) return false;
+    if (state.docCamOnly && !roomHasDocumentCamera(room)) return false;
+    if (furnitureSet.size > 0) {
+      const roomLabels = new Set(furnitureLabelsFromCodes(room.furniture));
+      for (const need of furnitureSet) {
+        if (!roomLabels.has(need)) return false;
+      }
+    }
     if (q) {
       const name = (room.name || "").toLowerCase();
       const building = (room.building || "").toLowerCase();
@@ -111,9 +232,11 @@ interface RoomsFiltersProps {
   state: RoomsFilterState;
   setSearch: (v: string) => void;
   setBuilding: (v: string) => void;
-  setMinCapacity: (v: number) => void;
-  setAvOnly: (v: boolean) => void;
+  toggleCapacityBucket: (b: CapacityBucket) => void;
+  setStreamingOnly: (v: boolean) => void;
+  setElectronicOnly: (v: boolean) => void;
   setDocCamOnly: (v: boolean) => void;
+  toggleFurniture: (label: string) => void;
   setSort: (v: SortOption) => void;
   buildingModalOpen: boolean;
   setBuildingModalOpen: (v: boolean) => void;
@@ -122,13 +245,122 @@ interface RoomsFiltersProps {
   onReset: () => void;
 }
 
+function FilterCheckbox({
+  checked,
+  onChange,
+  label,
+}: {
+  checked: boolean;
+  onChange: (v: boolean) => void;
+  label: string;
+}) {
+  return (
+    <motion.label
+      className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 transition-colors hover:bg-[#1A1A1A]"
+      whileHover={{ backgroundColor: "rgba(255,255,255,0.04)" }}
+    >
+      <span className="relative flex h-5 w-5 shrink-0 items-center justify-center rounded border border-[#2A2A2A] bg-[#111111]">
+        <input
+          type="checkbox"
+          checked={checked}
+          onChange={(e) => onChange(e.target.checked)}
+          className="absolute inset-0 opacity-0 cursor-pointer"
+          aria-label={label}
+        />
+        <motion.span
+          className="pointer-events-none absolute inset-0 rounded border bg-[#111111]"
+          animate={{
+            borderColor: checked ? "#FFD100" : "#2A2A2A",
+            backgroundColor: checked ? "rgba(255, 209, 0, 0.15)" : "#111111",
+          }}
+          transition={{ duration: 0.2 }}
+        />
+        <AnimatePresence initial={false}>
+          {checked && (
+            <motion.svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#FFD100"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="relative z-10 h-3 w-3"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <path d="M5 12l5 5L20 7" />
+            </motion.svg>
+          )}
+        </AnimatePresence>
+      </span>
+      <span className="text-sm text-gray-300">{label}</span>
+    </motion.label>
+  );
+}
+
+function CollapsibleSection({
+  title,
+  open,
+  onToggle,
+  children,
+}: {
+  title: string;
+  open: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-lg border border-[#2A2A2A] bg-[#111111] overflow-hidden">
+      <button
+        type="button"
+        onClick={onToggle}
+        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-white transition hover:bg-[#1A1A1A] focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-inset"
+      >
+        {title}
+        <motion.span
+          animate={{ rotate: open ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="text-gray-500"
+        >
+          ▼
+        </motion.span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-[#2A2A2A] px-2 pb-2 pt-1">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+const CAPACITY_BUCKET_OPTIONS: { value: CapacityBucket; label: string }[] = [
+  { value: "small", label: "Small (0–50)" },
+  { value: "medium", label: "Medium (51–150)" },
+  { value: "large", label: "Large (151+)" },
+];
+
 export function RoomsFilters({
   state,
   setSearch,
   setBuilding,
-  setMinCapacity,
-  setAvOnly,
+  toggleCapacityBucket,
+  setStreamingOnly,
+  setElectronicOnly,
   setDocCamOnly,
+  toggleFurniture,
   setSort,
   buildingModalOpen,
   setBuildingModalOpen,
@@ -136,6 +368,10 @@ export function RoomsFilters({
   hasActiveFilters,
   onReset,
 }: RoomsFiltersProps) {
+  const [avOpen, setAvOpen] = useState(false);
+  const [furnitureOpen, setFurnitureOpen] = useState(false);
+  const [capacityOpen, setCapacityOpen] = useState(false);
+
   const buildingLabel = useMemo(
     () => buildingsList.find((b) => b.value === state.building)?.label ?? "Any building",
     [state.building, buildingsList]
@@ -143,67 +379,74 @@ export function RoomsFilters({
 
   return (
     <>
-      <div className="space-y-4 rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-4 sm:p-5">
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="space-y-4">
+        {/* Building selector */}
+        <div className="rounded-xl border border-[#2A2A2A] bg-[#111111] p-3">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
+            Building
+          </p>
           <button
             type="button"
             onClick={() => setBuildingModalOpen(true)}
-            className="rounded-xl border border-[#2A2A2A] bg-[#111111] px-4 py-2.5 text-sm font-medium text-gray-300 transition hover:border-[#FFD100]/50 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+            className="w-full rounded-lg border border-[#2A2A2A] bg-[#1A1A1A] px-4 py-2.5 text-left text-sm font-medium text-gray-200 transition hover:border-[#FFD100]/60 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-black"
           >
             {buildingLabel}
           </button>
-          <label className="flex items-center gap-2">
-            <span className="text-sm text-gray-500">Min capacity</span>
-            <input
-              type="number"
-              min={0}
-              max={500}
-              value={state.minCapacity === 0 ? "" : state.minCapacity}
-              onChange={(e) => setMinCapacity(Math.max(0, parseInt(e.target.value, 10) || 0))}
-              placeholder="0"
-              className="w-20 rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-sm text-white placeholder-gray-500 focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+        </div>
+
+        {/* Filter sections */}
+        <div className="grid gap-3 sm:grid-cols-2">
+          <CollapsibleSection
+            title="Capacity"
+            open={capacityOpen}
+            onToggle={() => setCapacityOpen((o) => !o)}
+          >
+            {CAPACITY_BUCKET_OPTIONS.map((opt) => (
+              <FilterCheckbox
+                key={opt.value}
+                checked={state.capacityBuckets.includes(opt.value)}
+                onChange={() => toggleCapacityBucket(opt.value)}
+                label={opt.label}
+              />
+            ))}
+          </CollapsibleSection>
+          <CollapsibleSection
+            title="AV Capabilities"
+            open={avOpen}
+            onToggle={() => setAvOpen((o) => !o)}
+          >
+            <FilterCheckbox
+              checked={state.streamingOnly}
+              onChange={setStreamingOnly}
+              label="Streaming & Recording"
             />
-          </label>
-          <label className="flex cursor-pointer items-center gap-2">
-            <input
-              type="checkbox"
-              checked={state.avOnly}
-              onChange={(e) => setAvOnly(e.target.checked)}
-              className="h-4 w-4 rounded border-[#2A2A2A] bg-[#111111] text-[#FFD100] focus:ring-[#FFD100]"
+            <FilterCheckbox
+              checked={state.electronicOnly}
+              onChange={setElectronicOnly}
+              label="Electronic Classroom"
             />
-            <span className="text-sm text-gray-300">AV (SR)</span>
-          </label>
-          <label className="flex cursor-pointer items-center gap-2">
-            <input
-              type="checkbox"
+            <FilterCheckbox
               checked={state.docCamOnly}
-              onChange={(e) => setDocCamOnly(e.target.checked)}
-              className="h-4 w-4 rounded border-[#2A2A2A] bg-[#111111] text-[#FFD100] focus:ring-[#FFD100]"
+              onChange={setDocCamOnly}
+              label="Document Camera"
             />
-            <span className="text-sm text-gray-300">Document Camera (D)</span>
-          </label>
-          <label className="flex items-center gap-2">
-            <span className="text-sm text-gray-500">Sort</span>
-            <select
-              value={state.sort}
-              onChange={(e) => setSort(e.target.value as SortOption)}
-              className="rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-sm text-white focus:border-[#FFD100] focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
-            >
-              <option value="recommended">Recommended (building A→Z, room #)</option>
-              <option value="capacity-low">Capacity: Low → High</option>
-              <option value="capacity-high">Capacity: High → Low</option>
-              <option value="name-az">Name: A → Z</option>
-            </select>
-          </label>
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={onReset}
-              className="rounded-xl border border-[#FFD100]/50 bg-transparent px-4 py-2.5 text-sm font-medium text-[#FFD100] transition hover:bg-[#FFD100]/10 focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
-            >
-              Reset filters
-            </button>
-          )}
+          </CollapsibleSection>
+          <CollapsibleSection
+            title="Furniture Layout"
+            open={furnitureOpen}
+            onToggle={() => setFurnitureOpen((o) => !o)}
+          >
+            <div className="max-h-48 overflow-y-auto space-y-0.5">
+              {FURNITURE_OPTIONS.map((label) => (
+                <FilterCheckbox
+                  key={label}
+                  checked={state.furnitureSelected.includes(label)}
+                  onChange={() => toggleFurniture(label)}
+                  label={label}
+                />
+              ))}
+            </div>
+          </CollapsibleSection>
         </div>
       </div>
 

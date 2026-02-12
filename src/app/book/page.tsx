@@ -1,48 +1,58 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense, useCallback, useMemo, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { ROOMS, getBuildingsFromRooms } from "@/data/rooms";
-import type { BookedSlot, EventFormData, Room } from "@/types/booking";
-import { roomAvCapable, timeRangesOverlap, timeToMinutes } from "@/types/booking";
+import type { EventFormData, Room } from "@/types/booking";
+import {
+  roomHasDocumentCamera,
+  roomIsElectronicClassroom,
+  roomIsStreamingRecordingCapable,
+  timeRangesOverlap,
+  timeToMinutes,
+} from "@/types/booking";
+import { furnitureLabelsFromCodes } from "@/lib/furniture";
+import { useBookings } from "@/lib/bookingsStore";
+import Link from "next/link";
 import { ConfirmationPage } from "@/components/ConfirmationPage";
 import { EventForm } from "@/components/EventForm";
 import { ProgressStepper } from "@/components/ProgressStepper";
 import { RoomRecommendation } from "@/components/RoomRecommendation";
 
-const TOTAL_STEPS = 3;
+const TOTAL_STEPS_FULL = 3;
+const TOTAL_STEPS_DIRECT = 2;
 
 function getMatchingRooms(formData: EventFormData): Room[] {
   const {
     groupSize,
     preferredBuilding,
-    accessibilityRequired,
     avNeedsEnabled,
     avNeeds,
+    furnitureNeedsEnabled,
+    furnitureNeeds,
   } = formData;
 
-  const needsProjectorOrHdmi =
-    avNeedsEnabled &&
-    (avNeeds.includes("projector") || avNeeds.includes("hdmi"));
-  const needsDocCameraOnly =
-    avNeedsEnabled &&
-    avNeeds.includes("docCamera") &&
-    !avNeeds.includes("projector") &&
-    !avNeeds.includes("hdmi");
-  const hasAnyAvNeed =
-    avNeedsEnabled &&
-    avNeeds.length > 0 &&
-    !avNeeds.includes("none") &&
-    avNeeds.some((n) => n !== "none");
+  const needsStreaming = avNeedsEnabled && avNeeds.includes("streamingRecording");
+  const needsElectronic = avNeedsEnabled && avNeeds.includes("electronicClassroom");
+  const needsDocCam = avNeedsEnabled && avNeeds.includes("documentCamera");
+  const hasAnyAvNeed = avNeedsEnabled && avNeeds.length > 0 && !avNeeds.includes("none");
+
+  const needsFurniture =
+    furnitureNeedsEnabled && Array.isArray(furnitureNeeds) && furnitureNeeds.length > 0;
 
   const filtered: Room[] = ROOMS.filter((room) => {
     if (room.capacity < groupSize) return false;
     if (preferredBuilding && preferredBuilding.trim() !== "" && room.building !== preferredBuilding) return false;
-    if (accessibilityRequired) {
-      if (room.accessible === false) return false;
+    if (needsStreaming && !roomIsStreamingRecordingCapable(room)) return false;
+    if (needsElectronic && !roomIsElectronicClassroom(room)) return false;
+    if (needsDocCam && !roomHasDocumentCamera(room)) return false;
+    if (needsFurniture) {
+      const labels = furnitureLabelsFromCodes(room.furniture);
+      for (const need of furnitureNeeds) {
+        if (!labels.includes(need)) return false;
+      }
     }
-    if (needsProjectorOrHdmi && !roomAvCapable(room)) return false;
-    if (needsDocCameraOnly && !room.docCamera) return false;
     return true;
   });
 
@@ -52,20 +62,63 @@ function getMatchingRooms(formData: EventFormData): Room[] {
     let s = 0;
     const capacityCloseness = room.capacity - groupSize;
     s -= capacityCloseness;
-    if (!hasAnyAvNeed || (!needsProjectorOrHdmi && !needsDocCameraOnly)) return s;
-    if (roomAvCapable(room)) s += 10;
-    if (room.docCamera) s += 5;
-    if (needsProjectorOrHdmi && room.docCamera) s += 3;
+    // No AV scoring unless AV needs were selected
+    if (!hasAnyAvNeed) return s;
+    if (needsStreaming && roomIsStreamingRecordingCapable(room)) s += 10;
+    if (needsElectronic && roomIsElectronicClassroom(room)) s += 8;
+    if (needsDocCam && roomHasDocumentCamera(room)) s += 6;
     return s;
   };
 
   return [...filtered].sort((a, b) => score(b) - score(a));
 }
 
-let confirmationCounter = 1;
-function generateConfirmationNumber(): string {
-  const seq = String(confirmationCounter++).padStart(3, "0");
-  return `CONF-2026-${seq}`;
+function validateRoomForBooking(args: {
+  room: Room;
+  form: EventFormData;
+  existingBookings: { roomId: string; preferredDate: string; timeSlot: string; durationMinutes: number }[];
+}): { ok: boolean; errors: string[] } {
+  const { room, form, existingBookings } = args;
+  const errors: string[] = [];
+
+  if (room.capacity < (form.groupSize ?? 0)) {
+    errors.push("This room does not fit your group size.");
+  }
+
+  const needsStreaming = (form.avNeedsEnabled ?? false) && (form.avNeeds ?? []).includes("streamingRecording");
+  const needsElectronic = (form.avNeedsEnabled ?? false) && (form.avNeeds ?? []).includes("electronicClassroom");
+  const needsDocCam = (form.avNeedsEnabled ?? false) && (form.avNeeds ?? []).includes("documentCamera");
+  if (needsStreaming && !roomIsStreamingRecordingCapable(room)) errors.push("Streaming & recording is not available in this room.");
+  if (needsElectronic && !roomIsElectronicClassroom(room)) errors.push("This room is not an electronic classroom.");
+  if (needsDocCam && !roomHasDocumentCamera(room)) errors.push("A document camera is not available in this room.");
+
+  const needsFurniture =
+    (form.furnitureNeedsEnabled ?? false) && (form.furnitureNeeds?.length ?? 0) > 0;
+  if (needsFurniture) {
+    const labels = furnitureLabelsFromCodes(room.furniture);
+    for (const need of form.furnitureNeeds ?? []) {
+      if (!labels.includes(need)) {
+        errors.push(`Furniture requirement not met: ${need}.`);
+      }
+    }
+  }
+
+  const date = form.preferredDate ?? "";
+  const timeSlot = form.timeSlot ?? "";
+  const duration = form.durationMinutes ?? 60;
+  if (date && timeSlot) {
+    const startM = timeToMinutes(timeSlot);
+    const overlap = existingBookings.some((b) => {
+      if (b.roomId !== String(room.id)) return false;
+      if (b.preferredDate !== date) return false;
+      const existingStart = timeToMinutes(b.timeSlot);
+      const existingDuration = b.durationMinutes ?? 60;
+      return timeRangesOverlap(existingStart, existingDuration, startM, duration);
+    });
+    if (overlap) errors.push("This room is already booked for that time.");
+  }
+
+  return { ok: errors.length === 0, errors };
 }
 
 const initialFormData: EventFormData = {
@@ -78,7 +131,8 @@ const initialFormData: EventFormData = {
   durationMinutes: 60,
   avNeedsEnabled: false,
   avNeeds: [],
-  accessibilityRequired: false,
+  furnitureNeedsEnabled: false,
+  furnitureNeeds: [],
   preferredBuilding: "",
   priorityLevel: "Medium",
 };
@@ -87,58 +141,101 @@ const buildingsList = getBuildingsFromRooms(ROOMS);
 
 function BookPageContent() {
   const searchParams = useSearchParams();
-  const buildingFromUrl = searchParams.get("building") ?? "";
+  const roomIdFromUrl = searchParams.get("roomId") ?? "";
+  const { bookings, addBooking } = useBookings();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<EventFormData>(() => ({
     ...initialFormData,
-    preferredBuilding: buildingFromUrl || initialFormData.preferredBuilding,
+    preferredBuilding: initialFormData.preferredBuilding,
   }));
-  const [bookedSlots, setBookedSlots] = useState<BookedSlot[]>([]);
   const [confirmationNumber, setConfirmationNumber] = useState("");
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
   const [doubleBookingError, setDoubleBookingError] = useState<string | null>(null);
+  const [selectedRoomError, setSelectedRoomError] = useState<string[] | null>(null);
+  const [directBookingError, setDirectBookingError] = useState<string | null>(null);
+  const [roomsLoading, setRoomsLoading] = useState(false);
 
   const matchingRooms = useMemo(() => getMatchingRooms(formData), [formData]);
+  const lockedRoom = useMemo(() => {
+    if (!roomIdFromUrl) return null;
+    return ROOMS.find((r) => String(r.id) === String(roomIdFromUrl)) ?? null;
+  }, [roomIdFromUrl]);
+
+  useEffect(() => {
+    if (step === 2 && !lockedRoom) {
+      setRoomsLoading(true);
+      const t = setTimeout(() => setRoomsLoading(false), 400);
+      return () => clearTimeout(t);
+    }
+  }, [step, lockedRoom]);
+
+  const totalSteps = lockedRoom ? TOTAL_STEPS_DIRECT : TOTAL_STEPS_FULL;
+  const existingBookings = useMemo(
+    () =>
+      bookings.map((b) => ({
+        roomId: b.roomId,
+        preferredDate: b.preferredDate,
+        timeSlot: b.timeSlot,
+        durationMinutes: b.durationMinutes,
+      })),
+    [bookings]
+  );
 
   const handleFormSubmit = useCallback(() => {
     setDoubleBookingError(null);
+    setSelectedRoomError(null);
+    setDirectBookingError(null);
     setStep(2);
   }, []);
 
+  /** Direct booking: validate capacity + double booking only, then confirm or show error. */
+  const handleDirectBookingSubmit = useCallback(() => {
+    if (!lockedRoom) return;
+    setDirectBookingError(null);
+    const capacityOk = lockedRoom.capacity >= (formData.groupSize ?? 0);
+    if (!capacityOk) {
+      setDirectBookingError("This room does not fit your group size.");
+      return;
+    }
+    const overlap = existingBookings.some((b) => {
+      if (b.roomId !== String(lockedRoom.id)) return false;
+      if (b.preferredDate !== (formData.preferredDate ?? "")) return false;
+      const startM = timeToMinutes(formData.timeSlot ?? "");
+      const durationM = formData.durationMinutes ?? 60;
+      const existingStart = timeToMinutes(b.timeSlot);
+      const existingDuration = b.durationMinutes ?? 60;
+      return timeRangesOverlap(existingStart, existingDuration, startM, durationM);
+    });
+    if (overlap) {
+      setDirectBookingError("This room is already booked for that time.");
+      return;
+    }
+    setSelectedRoom(lockedRoom);
+    const booking = addBooking({ form: formData, room: lockedRoom });
+    setConfirmationNumber(booking.confirmationNumber);
+    setStep(2);
+  }, [lockedRoom, formData, existingBookings, addBooking]);
+
   const handleSelectRoom = useCallback(
     (room: Room) => {
-      const startM = timeToMinutes(formData.timeSlot);
-      const durationM = formData.durationMinutes ?? 60;
-      const isOverlap = bookedSlots.some((s) => {
-        if (s.roomId !== room.id || s.date !== formData.preferredDate) return false;
-        const existingStart = timeToMinutes(s.timeSlot);
-        const existingDuration = s.durationMinutes ?? 60;
-        return timeRangesOverlap(existingStart, existingDuration, startM, durationM);
-      });
-      if (isOverlap) {
-        setDoubleBookingError("This room is already booked for that time.");
+      const validation = validateRoomForBooking({ room, form: formData, existingBookings });
+      if (!validation.ok) {
+        setDoubleBookingError(validation.errors[0] ?? "This room cannot be booked with the selected constraints.");
         return;
       }
-      setBookedSlots((prev) => [
-        ...prev,
-        {
-          roomId: room.id,
-          roomName: room.name,
-          date: formData.preferredDate,
-          timeSlot: formData.timeSlot,
-          durationMinutes: formData.durationMinutes ?? 60,
-        },
-      ]);
       setSelectedRoom(room);
-      setConfirmationNumber(generateConfirmationNumber());
+      const booking = addBooking({ form: formData, room });
+      setConfirmationNumber(booking.confirmationNumber);
       setDoubleBookingError(null);
       setStep(3);
     },
-    [formData.preferredDate, formData.timeSlot, formData.durationMinutes, bookedSlots]
+    [formData, existingBookings, addBooking]
   );
 
   const handleBack = useCallback(() => {
     setDoubleBookingError(null);
+    setSelectedRoomError(null);
+    setDirectBookingError(null);
     setStep(1);
   }, []);
 
@@ -146,33 +243,105 @@ function BookPageContent() {
     setFormData(initialFormData);
     setSelectedRoom(null);
     setConfirmationNumber("");
+    setDirectBookingError(null);
     setStep(1);
   }, []);
+
+  const confirmLockedRoom = useCallback(() => {
+    if (!lockedRoom) return;
+    const validation = validateRoomForBooking({ room: lockedRoom, form: formData, existingBookings });
+    if (!validation.ok) {
+      setSelectedRoomError(validation.errors);
+      return;
+    }
+    setSelectedRoom(lockedRoom);
+    const booking = addBooking({ form: formData, room: lockedRoom });
+    setConfirmationNumber(booking.confirmationNumber);
+    setSelectedRoomError(null);
+    setStep(3);
+  }, [lockedRoom, formData, existingBookings, addBooking]);
 
   return (
     <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
       <div className="mx-auto max-w-2xl">
-        <ProgressStepper currentStep={step} totalSteps={TOTAL_STEPS} />
+        <ProgressStepper currentStep={step} totalSteps={totalSteps} />
 
+        <AnimatePresence mode="wait">
         {step === 1 && (
-          <div className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6 shadow-xl sm:p-8">
+          <motion.div
+            key="step1"
+            initial={{ opacity: 0, x: -12 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 12 }}
+            transition={{ duration: 0.25 }}
+            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6 shadow-xl sm:p-8"
+          >
             <h2 className="mb-6 text-xl font-semibold text-white">
-              Event Information
+              {lockedRoom ? "Book This Room" : "Event Information"}
             </h2>
+            {lockedRoom && (
+              <div className="mb-6 rounded-xl border border-[#FFD100]/40 bg-[#111111] p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#FFD100]">Selected Room</p>
+                    <p className="mt-1 text-lg font-semibold text-white">{lockedRoom.name}</p>
+                    <p className="mt-1 text-sm text-gray-500">Capacity {lockedRoom.capacity}</p>
+                  </div>
+                  <Link
+                    href="/rooms"
+                    className="rounded-xl border border-[#2A2A2A] bg-transparent px-3 py-2 text-sm font-medium text-gray-400 transition hover:border-[#FFD100]/50 hover:text-[#FFD100] focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+                  >
+                    Change room
+                  </Link>
+                </div>
+              </div>
+            )}
+            {directBookingError && (
+              <div
+                className="mb-6 rounded-xl border-2 border-[#FFD100]/60 bg-[#FFD100]/10 p-4"
+                role="alert"
+              >
+                <p className="text-sm font-semibold text-[#FFD100]">{directBookingError}</p>
+              </div>
+            )}
             <EventForm
               data={formData}
               onChange={setFormData}
-              onSubmit={handleFormSubmit}
+              onSubmit={lockedRoom ? handleDirectBookingSubmit : handleFormSubmit}
               buildings={buildingsList}
+              directBooking={!!lockedRoom}
             />
-          </div>
+          </motion.div>
         )}
 
-        {step === 2 && (
-          <>
-            <h2 className="mb-6 text-xl font-semibold text-white">
-              Room Results
-            </h2>
+        {step === 2 && !lockedRoom && (
+          <motion.div
+            key="step2"
+            initial={{ opacity: 0, x: 12 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -12 }}
+            transition={{ duration: 0.25 }}
+          >
+            <h2 className="mb-6 text-xl font-semibold text-white">Room Results</h2>
+            {roomsLoading ? (
+              <div className="space-y-4">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="h-40 animate-pulse rounded-xl border border-[#2A2A2A] bg-[#1A1A1A]"
+                  >
+                    <div className="p-4">
+                      <div className="h-6 w-48 rounded bg-[#2A2A2A]" />
+                      <div className="mt-3 h-4 w-32 rounded bg-[#2A2A2A]" />
+                      <div className="mt-4 flex gap-2">
+                        <div className="h-8 w-24 rounded-full bg-[#2A2A2A]" />
+                        <div className="h-8 w-28 rounded-full bg-[#2A2A2A]" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
             <RoomRecommendation
               formData={formData}
               matchingRooms={matchingRooms}
@@ -180,19 +349,28 @@ function BookPageContent() {
               onBack={handleBack}
               doubleBookingError={doubleBookingError}
             />
-          </>
+            )}
+          </motion.div>
         )}
 
-        {step === 3 && selectedRoom && (
-          <div className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6 shadow-xl sm:p-8">
+        {(step === 3 || (lockedRoom && step === 2)) && selectedRoom && (
+          <motion.div
+            key="step3"
+            initial={{ opacity: 0, x: 12 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="rounded-xl border border-[#2A2A2A] bg-[#1A1A1A] p-6 shadow-xl sm:p-8"
+          >
             <ConfirmationPage
               formData={formData}
               room={selectedRoom}
               confirmationNumber={confirmationNumber}
               onBookAnother={handleBookAnother}
             />
-          </div>
+          </motion.div>
         )}
+        </AnimatePresence>
       </div>
     </div>
   );

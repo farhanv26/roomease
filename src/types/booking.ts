@@ -15,8 +15,12 @@ export interface Room {
   [key: string]: unknown;
 }
 
-/** AV need option: projector/hdmi => SR (avCapable); microphone => SR preference only; docCamera => D */
-export type AvNeedKey = "projector" | "hdmi" | "microphone" | "docCamera" | "none";
+/** AV options shown to users (no codes). */
+export type AvNeedKey =
+  | "streamingRecording"
+  | "electronicClassroom"
+  | "documentCamera"
+  | "none";
 
 export interface EventFormData {
   eventName: string;
@@ -31,9 +35,11 @@ export interface EventFormData {
   avNeedsEnabled: boolean;
   /** Selected AV needs; empty or ["none"] = no preference */
   avNeeds: AvNeedKey[];
-  accessibilityRequired: boolean;
   avNotes?: string;
-  accessibilityNotes?: string;
+  /** Toggle "I have specific furniture needs" */
+  furnitureNeedsEnabled: boolean;
+  /** Selected furniture labels; empty = no preference */
+  furnitureNeeds: string[];
   preferredBuilding?: string;
   priorityLevel?: string;
 }
@@ -75,10 +81,9 @@ export const DURATION_CUSTOM_MAX = 6 * 60;
 
 /** AV need options for "What do you need?" chip list */
 export const AV_NEED_OPTIONS: { value: AvNeedKey; label: string }[] = [
-  { value: "projector", label: "Projector / Display" },
-  { value: "hdmi", label: "HDMI / USB-C connection" },
-  { value: "microphone", label: "Microphone / Speakers" },
-  { value: "docCamera", label: "Document Camera" },
+  { value: "streamingRecording", label: "Streaming & Recording Ready" },
+  { value: "electronicClassroom", label: "Electronic Classroom" },
+  { value: "documentCamera", label: "Document Camera Available" },
   { value: "none", label: "No preference" },
 ];
 
@@ -131,4 +136,19 @@ export function timeRangesOverlap(
 /** Room is AV-capable (SR) for matching */
 export function roomAvCapable(room: Room): boolean {
   return room.avCapable === true || room.hasAV === true;
+}
+
+export function roomHasDocumentCamera(room: Room): boolean {
+  return room.docCamera === true;
+}
+
+export function roomIsStreamingRecordingCapable(room: Room): boolean {
+  // Dataset encodes SR in rawFeatureCode; do not show codes in UI.
+  const raw = String(room.rawFeatureCode ?? "").toUpperCase();
+  return raw.includes("SR");
+}
+
+export function roomIsElectronicClassroom(room: Room): boolean {
+  // Dataset does not distinguish; treat AV-capable rooms as electronic classroom for now.
+  return roomAvCapable(room);
 }

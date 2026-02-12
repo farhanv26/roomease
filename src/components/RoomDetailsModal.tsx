@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getRoomDetailEntries } from "@/data/rooms";
-import { formatFurniture } from "@/lib/furniture";
+import { getBuildingTicketLabel } from "@/lib/buildings";
+import { AVAndFurnitureSections } from "@/components/AVAndFurnitureSections";
+import { useBookings } from "@/lib/bookingsStore";
 import type { Room } from "@/types/booking";
-import { roomAvCapable } from "@/types/booking";
+import { timeToMinutes, formatTimeSlot, formatDuration } from "@/types/booking";
 
 interface RoomDetailsModalProps {
   room: Room;
@@ -24,6 +26,12 @@ export function RoomDetailsModal({
   showStartBooking,
   onSelectRoom,
 }: RoomDetailsModalProps) {
+  const { bookings } = useBookings();
+  const [availabilityDate, setAvailabilityDate] = useState(() =>
+    new Date().toISOString().slice(0, 10)
+  );
+  const [showDatePicker, setShowDatePicker] = useState(false);
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -41,8 +49,15 @@ export function RoomDetailsModal({
   if (!isOpen) return null;
 
   const details = getRoomDetailEntries(room);
-  const avCapable = roomAvCapable(room);
-  const docCamera = room.docCamera === true;
+  const availabilityBookings = useMemo(() => {
+    return bookings.filter(
+      (b) => String(b.roomId) === String(room.id) && b.preferredDate === availabilityDate
+    );
+  }, [bookings, room.id, availabilityDate]);
+
+  const timelineStart = 9 * 60;
+  const timelineEnd = 22 * 60;
+  const timelineTotal = timelineEnd - timelineStart;
 
   return (
     <div
@@ -74,7 +89,9 @@ export function RoomDetailsModal({
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           <div>
             <p className="text-sm text-gray-500">Building</p>
-            <p className="text-white font-medium">{room.building}</p>
+            <p className="text-white font-medium">
+              {getBuildingTicketLabel(room.building)}
+            </p>
           </div>
           {room.roomNumber && (
             <div>
@@ -86,45 +103,68 @@ export function RoomDetailsModal({
             <p className="text-sm text-gray-500">Capacity</p>
             <p className="text-white font-medium">{room.capacity}</p>
           </div>
-          {room.furniture && (() => {
-            const { full } = formatFurniture(room.furniture);
-            return full ? (
-              <div>
-                <p className="text-sm text-gray-500">Furniture</p>
-                <p className="text-white font-medium">{full}</p>
-              </div>
-            ) : null;
-          })()}
 
-          <div>
-            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">AV & equipment</h3>
-            <p className="mb-2 text-xs text-gray-500">
-              SR = AV-compatible (display/projector support). D = document camera available. Asterisks (*) in source data are ignored.
-            </p>
-            <ul className="space-y-1.5 text-sm">
-              {avCapable && (
-                <li className="text-[#FFD100]">AV (SR) — display/projector support</li>
-              )}
-              {docCamera && (
-                <li className="text-[#FFD100]">Doc Cam (D) — document camera available</li>
-              )}
-              {!avCapable && !docCamera && (
-                <li className="text-gray-500">No AV features listed</li>
-              )}
-            </ul>
+          <div className="space-y-3">
+            <AVAndFurnitureSections room={room} animatedBadges={false} />
           </div>
 
           <div>
-            <p className="text-sm text-gray-500">Accessible</p>
-            <p className="text-white font-medium">{room.accessible ? "Yes" : "No"}</p>
-          </div>
-
-          {room.rawFeatureCode && (
-            <div>
-              <p className="text-sm text-gray-500">Raw feature code</p>
-              <p className="font-mono text-xs text-gray-500">{room.rawFeatureCode}</p>
+            <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Availability</h3>
+            <div className="flex items-center gap-2 mb-2">
+              <button
+                type="button"
+                onClick={() => setShowDatePicker((v) => !v)}
+                className="rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-sm text-[#FFD100] hover:border-[#FFD100]/50"
+              >
+                Pick a different date
+              </button>
+              {showDatePicker && (
+                <input
+                  type="date"
+                  value={availabilityDate}
+                  onChange={(e) => {
+                    setAvailabilityDate(e.target.value);
+                    setShowDatePicker(false);
+                  }}
+                  className="rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-sm text-white"
+                />
+              )}
             </div>
-          )}
+            <p className="text-xs text-gray-500 mb-2">Showing {availabilityDate} (9:00 – 22:00)</p>
+            {availabilityBookings.length === 0 ? (
+              <p className="rounded-lg border border-[#2A2A2A] bg-[#111111] p-4 text-sm text-gray-500">
+                No bookings for this room on this date.
+              </p>
+            ) : (
+              <div className="relative h-12 w-full rounded-lg border border-[#2A2A2A] bg-[#111111]">
+                {availabilityBookings.map((b) => {
+                  const startM = timeToMinutes(b.timeSlot);
+                  const endM = startM + (b.durationMinutes ?? 60);
+                  const left = Math.max(0, ((startM - timelineStart) / timelineTotal) * 100);
+                  const width = Math.min(
+                    100 - left,
+                    ((endM - startM) / timelineTotal) * 100
+                  );
+                  return (
+                    <div
+                      key={b.id}
+                      className="absolute inset-y-1 rounded flex items-center justify-center overflow-hidden mx-0.5"
+                      style={{
+                        left: `${left}%`,
+                        width: `${Math.max(width, 6)}%`,
+                        minWidth: "2rem",
+                      }}
+                      title={`${formatTimeSlot(b.timeSlot)} – ${formatDuration(b.durationMinutes)}`}
+                    >
+                      <span className="rounded bg-[#FFD100]/30 border border-[#FFD100]/50 px-1.5 py-0.5 text-[10px] font-medium text-[#FFD100] truncate max-w-full">
+                        {formatTimeSlot(b.timeSlot)}–{formatDuration(b.durationMinutes)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
 
           {details.length > 0 && (
             <div>
@@ -143,7 +183,7 @@ export function RoomDetailsModal({
         <div className="border-t border-[#2A2A2A] p-4 flex gap-3">
           {showStartBooking ? (
             <Link
-              href={`/book?building=${encodeURIComponent(room.building || "")}`}
+              href={`/book?roomId=${encodeURIComponent(String(room.id))}`}
               className="flex-1 rounded-xl bg-[#FFD100] py-3 text-center font-semibold text-black shadow-lg transition hover:bg-[#e6bc00] focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A]"
             >
               Start booking with this room

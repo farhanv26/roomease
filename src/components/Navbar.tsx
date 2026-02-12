@@ -31,6 +31,9 @@ export function Navbar() {
   const isHome = pathname === "/";
   const isRooms = pathname === "/rooms";
   const isBook = pathname === "/book";
+  const isBookings = pathname === "/bookings";
+  const isCompare = pathname === "/compare";
+  const isAnalytics = pathname === "/analytics";
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#2A2A2A] bg-black/95 backdrop-blur-sm transition-shadow duration-200">
@@ -46,6 +49,15 @@ export function Navbar() {
         <div className="flex items-center gap-6">
           <NavLink href="/rooms" active={isRooms}>
             Rooms
+          </NavLink>
+          <NavLink href="/bookings" active={isBookings}>
+            My Bookings
+          </NavLink>
+          <NavLink href="/compare" active={isCompare}>
+            Compare
+          </NavLink>
+          <NavLink href="/analytics" active={isAnalytics}>
+            Analytics
           </NavLink>
           <NavLink href="/#features" active={false}>
             Learn More

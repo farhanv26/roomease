@@ -1,0 +1,209 @@
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+import type { Booking } from "@/lib/bookingsStore";
+import { useBookings } from "@/lib/bookingsStore";
+import { timeRangesOverlap, timeToMinutes } from "@/types/booking";
+import { DURATION_PRESETS, TIME_SLOTS_30MIN } from "@/types/booking";
+
+interface EditBookingModalProps {
+  booking: Booking;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function EditBookingModal({ booking, isOpen, onClose }: EditBookingModalProps) {
+  const { bookings, updateBooking } = useBookings();
+  const [eventName, setEventName] = useState(booking.eventName);
+  const [organizerName, setOrganizerName] = useState(booking.organizerName);
+  const [preferredDate, setPreferredDate] = useState(booking.preferredDate);
+  const [timeSlot, setTimeSlot] = useState(booking.timeSlot);
+  const [durationMinutes, setDurationMinutes] = useState(booking.durationMinutes);
+  const [groupSize, setGroupSize] = useState(booking.groupSize);
+  const [conflictError, setConflictError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setEventName(booking.eventName);
+      setOrganizerName(booking.organizerName);
+      setPreferredDate(booking.preferredDate);
+      setTimeSlot(booking.timeSlot);
+      setDurationMinutes(booking.durationMinutes);
+      setGroupSize(booking.groupSize);
+      setConflictError(null);
+    }
+  }, [isOpen, booking]);
+
+  const handleSubmit = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault();
+      setConflictError(null);
+
+      const others = bookings.filter((b) => b.id !== booking.id);
+      const startM = timeToMinutes(timeSlot);
+      const overlap = others.some((b) => {
+        if (b.roomId !== booking.roomId || b.preferredDate !== preferredDate) return false;
+        const existingStart = timeToMinutes(b.timeSlot);
+        const existingDuration = b.durationMinutes ?? 60;
+        return timeRangesOverlap(existingStart, existingDuration, startM, durationMinutes);
+      });
+
+      if (overlap) {
+        setConflictError("This time conflicts with an existing booking.");
+        return;
+      }
+
+      updateBooking(booking.id, {
+        eventName,
+        organizerName,
+        preferredDate,
+        timeSlot,
+        durationMinutes,
+        groupSize,
+      });
+      onClose();
+    },
+    [
+      booking,
+      bookings,
+      durationMinutes,
+      eventName,
+      groupSize,
+      onClose,
+      organizerName,
+      preferredDate,
+      timeSlot,
+      updateBooking,
+    ]
+  );
+
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="edit-booking-title"
+    >
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+      <div
+        className="relative z-10 w-full max-w-lg max-h-[90vh] flex flex-col rounded-2xl border border-[#2A2A2A] bg-[#1A1A1A] shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between border-b border-[#2A2A2A] p-4">
+          <h2 id="edit-booking-title" className="text-lg font-semibold text-white">
+            Edit booking
+          </h2>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-lg p-2 text-gray-400 transition hover:bg-[#2A2A2A] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#FFD100]"
+            aria-label="Close"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-4 space-y-4">
+          <p className="text-sm text-gray-500">Confirmation #{booking.confirmationNumber} (unchanged)</p>
+          <p className="text-sm text-gray-500">Room: {booking.roomName}</p>
+
+          {conflictError && (
+            <div className="rounded-xl border-2 border-[#FFD100]/60 bg-[#FFD100]/10 p-3" role="alert">
+              <p className="text-sm font-semibold text-[#FFD100]">{conflictError}</p>
+            </div>
+          )}
+
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Event name</label>
+            <input
+              type="text"
+              value={eventName}
+              onChange={(e) => setEventName(e.target.value)}
+              className="w-full rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-white placeholder-gray-500 focus:border-[#FFD100]/50 focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Organizer</label>
+            <input
+              type="text"
+              value={organizerName}
+              onChange={(e) => setOrganizerName(e.target.value)}
+              className="w-full rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-white placeholder-gray-500 focus:border-[#FFD100]/50 focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Date</label>
+            <input
+              type="date"
+              value={preferredDate}
+              onChange={(e) => setPreferredDate(e.target.value)}
+              className="w-full rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-white focus:border-[#FFD100]/50 focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Start time</label>
+            <select
+              value={timeSlot}
+              onChange={(e) => setTimeSlot(e.target.value)}
+              className="w-full rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-white focus:border-[#FFD100]/50 focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+            >
+              {TIME_SLOTS_30MIN.map((s) => (
+                <option key={s.value} value={s.value}>
+                  {s.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Duration</label>
+            <select
+              value={durationMinutes}
+              onChange={(e) => setDurationMinutes(Number(e.target.value))}
+              className="w-full rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-white focus:border-[#FFD100]/50 focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+            >
+              {DURATION_PRESETS.map((p) => (
+                <option key={p.value} value={p.value}>
+                  {p.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Group size</label>
+            <input
+              type="number"
+              min={1}
+              value={groupSize || ""}
+              onChange={(e) => setGroupSize(Number(e.target.value) || 0)}
+              className="w-full rounded-lg border border-[#2A2A2A] bg-[#111111] px-3 py-2 text-white placeholder-gray-500 focus:border-[#FFD100]/50 focus:outline-none focus:ring-1 focus:ring-[#FFD100]"
+              required
+            />
+          </div>
+
+          <div className="flex gap-3 pt-2">
+            <button
+              type="submit"
+              className="flex-1 rounded-xl bg-[#FFD100] py-3 font-semibold text-black shadow-lg transition hover:bg-[#e6bc00] focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A]"
+            >
+              Save changes
+            </button>
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-xl border border-[#2A2A2A] bg-transparent px-4 py-3 font-medium text-gray-400 hover:border-gray-500 hover:text-white"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}

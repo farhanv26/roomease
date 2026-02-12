@@ -1,4 +1,5 @@
 import type { Room } from "@/types/booking";
+import { getBuildingTicketLabel } from "@/lib/buildings";
 import roomsJson from "./rooms.json";
 
 const typed = roomsJson as Room[];
@@ -18,7 +19,7 @@ const KNOWN_KEYS = new Set([
   "hasAV",
 ]);
 
-/** Unique buildings from room data, sorted; for building picker */
+/** Unique buildings from room data, sorted; labels use "CODE — Full Name" */
 export function getBuildingsFromRooms(rooms: Room[]): { value: string; label: string }[] {
   const set = new Set<string>();
   for (const r of rooms) {
@@ -26,7 +27,7 @@ export function getBuildingsFromRooms(rooms: Room[]): { value: string; label: st
     if (b) set.add(b);
   }
   const list = Array.from(set).sort((a, b) => a.localeCompare(b));
-  return [{ value: "", label: "Any building" }, ...list.map((b) => ({ value: b, label: b }))];
+  return [{ value: "", label: "Any building" }, ...list.map((b) => ({ value: b, label: getBuildingTicketLabel(b) }))];
 }
 
 /** Extra room fields for details view (excluding known keys) */

@@ -27,7 +27,7 @@ export function RoomRecommendation({
     return (
       <div className="rounded-xl border-2 border-[#FFD100]/50 bg-[#1A1A1A] p-8 shadow-xl">
         <p className="text-gray-300">
-          No rooms match your constraints. Try increasing flexibility (AV/Accessibility/Building) or adjusting group size.
+          No rooms match your constraints. Try adjusting AV, furniture, building, or group size.
         </p>
         <button
           type="button"
@@ -70,7 +70,8 @@ export function RoomRecommendation({
           groupSize={formData.groupSize}
           avNeedsEnabled={formData.avNeedsEnabled ?? false}
           avNeeds={formData.avNeeds ?? []}
-          accessibilityRequired={formData.accessibilityRequired ?? false}
+          furnitureNeedsEnabled={formData.furnitureNeedsEnabled ?? false}
+          furnitureNeeds={formData.furnitureNeeds ?? []}
           onSelect={() => onSelectRoom(bestMatch)}
           onViewDetails={() => setDetailsRoom(bestMatch)}
           isBestMatch
@@ -90,7 +91,8 @@ export function RoomRecommendation({
                 groupSize={formData.groupSize}
                 avNeedsEnabled={formData.avNeedsEnabled ?? false}
                 avNeeds={formData.avNeeds ?? []}
-                accessibilityRequired={formData.accessibilityRequired ?? false}
+                furnitureNeedsEnabled={formData.furnitureNeedsEnabled ?? false}
+                furnitureNeeds={formData.furnitureNeeds ?? []}
                 onSelect={() => onSelectRoom(room)}
                 onViewDetails={() => setDetailsRoom(room)}
               />

@@ -11,6 +11,7 @@ import {
   PRIORITY_LEVELS,
   formatDuration,
 } from "@/types/booking";
+import { FURNITURE_LABELS } from "@/lib/furniture";
 import { BuildingButton } from "./BuildingButton";
 import { DatePickerButton } from "./DatePickerButton";
 import { EventTypeSelector } from "./EventTypeSelector";
@@ -21,6 +22,8 @@ interface EventFormProps {
   onChange: (data: EventFormData) => void;
   onSubmit: () => void;
   buildings: { value: string; label: string }[];
+  /** When true, show only: Event Name, Organizer, Date, Time, Duration, Group Size. CTA: "Confirm Booking". */
+  directBooking?: boolean;
 }
 
 const defaultFormData: Partial<EventFormData> = {
@@ -33,7 +36,8 @@ const defaultFormData: Partial<EventFormData> = {
   durationMinutes: 60,
   avNeedsEnabled: false,
   avNeeds: [],
-  accessibilityRequired: false,
+  furnitureNeedsEnabled: false,
+  furnitureNeeds: [],
   preferredBuilding: "",
   priorityLevel: "Medium",
 };
@@ -41,7 +45,7 @@ const defaultFormData: Partial<EventFormData> = {
 const CUSTOM_HOURS = [0, 1, 2, 3, 4, 5, 6];
 const CUSTOM_MINUTES = [0, 15, 30, 45];
 
-export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProps) {
+export function EventForm({ data, onChange, onSubmit, buildings, directBooking }: EventFormProps) {
   const formData = { ...defaultFormData, ...data };
   const durationMin = formData.durationMinutes ?? 60;
   const isPreset = DURATION_PRESETS.some((p) => p.value === durationMin);
@@ -49,8 +53,13 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
   const customHours = Math.floor(durationMin / 60);
   const customMinutes = durationMin % 60;
   const avNeeds = formData.avNeeds ?? [];
+  const furnitureNeeds = formData.furnitureNeeds ?? [];
+  const furnitureOptions = Object.values(FURNITURE_LABELS);
 
-  const set = (key: keyof EventFormData, value: string | number | boolean | AvNeedKey[] | undefined) => {
+  const set = (
+    key: keyof EventFormData,
+    value: string | number | boolean | AvNeedKey[] | string[] | undefined
+  ) => {
     onChange({ ...formData, [key]: value });
   };
 
@@ -61,6 +70,13 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
     }
     const next = avNeeds.includes(key) ? avNeeds.filter((n) => n !== key) : [...avNeeds.filter((n) => n !== "none"), key];
     set("avNeeds", next);
+  };
+
+  const toggleFurnitureNeed = (label: string) => {
+    const next = furnitureNeeds.includes(label)
+      ? furnitureNeeds.filter((l) => l !== label)
+      : [...furnitureNeeds, label];
+    set("furnitureNeeds", next);
   };
 
   const setCustomDuration = (hours: number, minutes: number) => {
@@ -74,14 +90,20 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
     (formData.eventType !== "Other" || (formData.eventTypeCustom ?? "").trim() !== "");
   const durationValid =
     durationMin >= DURATION_CUSTOM_MIN && durationMin <= DURATION_CUSTOM_MAX;
-  const isValid =
-    (formData.eventName?.trim() ?? "") !== "" &&
-    (formData.organizerName?.trim() ?? "") !== "" &&
-    (formData.preferredDate ?? "") !== "" &&
-    (formData.timeSlot ?? "") !== "" &&
-    (formData.groupSize ?? 0) > 0 &&
-    isEventTypeValid &&
-    durationValid;
+  const isValid = directBooking
+    ? (formData.eventName?.trim() ?? "") !== "" &&
+      (formData.organizerName?.trim() ?? "") !== "" &&
+      (formData.preferredDate ?? "") !== "" &&
+      (formData.timeSlot ?? "") !== "" &&
+      (formData.groupSize ?? 0) > 0 &&
+      durationValid
+    : (formData.eventName?.trim() ?? "") !== "" &&
+      (formData.organizerName?.trim() ?? "") !== "" &&
+      (formData.preferredDate ?? "") !== "" &&
+      (formData.timeSlot ?? "") !== "" &&
+      (formData.groupSize ?? 0) > 0 &&
+      isEventTypeValid &&
+      durationValid;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -211,7 +233,7 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
         />
       </div>
 
-      {/* Event Name, Organizer, Event Type */}
+      {/* Event Name, Organizer (and Event Type only in full flow) */}
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label htmlFor="eventName" className={labelClass}>
@@ -243,21 +265,24 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
         </div>
       </div>
 
-      <div className="sm:col-span-2">
-        <EventTypeSelector
-          id="eventType"
-          label="Event Type"
-          value={formData.eventType ?? ""}
-          customValue={formData.eventTypeCustom ?? ""}
-          onChange={(v, custom) => {
-            set("eventType", v);
-            if (custom !== undefined) set("eventTypeCustom", custom);
-          }}
-          required
-        />
-      </div>
+      {!directBooking && (
+        <div className="sm:col-span-2">
+          <EventTypeSelector
+            id="eventType"
+            label="Event Type"
+            value={formData.eventType ?? ""}
+            customValue={formData.eventTypeCustom ?? ""}
+            onChange={(v, custom) => {
+              set("eventType", v);
+              if (custom !== undefined) set("eventTypeCustom", custom);
+            }}
+            required
+          />
+        </div>
+      )}
 
-      {/* AV section: toggle + chips + optional notes */}
+      {/* AV section (full flow only) */}
+      {!directBooking && (
       <div className="space-y-4">
         <label className="flex cursor-pointer items-center gap-2">
           <input
@@ -276,7 +301,8 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
             <p className="text-sm text-gray-500">What do you need?</p>
             <div className="flex flex-wrap gap-2">
               {AV_NEED_OPTIONS.map((opt) => {
-                const isSelected = avNeeds.includes(opt.value);
+                const isSelected =
+                  opt.value === "none" ? avNeeds.length === 0 : avNeeds.includes(opt.value);
                 return (
                   <button
                     key={opt.value}
@@ -309,35 +335,47 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
           </div>
         </div>
 
+        {/* Furniture Requirements (replaces accessibility) */}
         <label className="flex cursor-pointer items-center gap-2">
           <input
             type="checkbox"
-            checked={formData.accessibilityRequired ?? false}
-            onChange={(e) => set("accessibilityRequired", e.target.checked)}
+            checked={formData.furnitureNeedsEnabled ?? false}
+            onChange={(e) => set("furnitureNeedsEnabled", e.target.checked)}
             className="h-4 w-4 rounded border-[#2A2A2A] bg-[#111111] text-[#FFD100] focus:ring-[#FFD100]"
           />
-          <span className="text-sm font-medium text-gray-400">Accessibility Required</span>
+          <span className="text-sm font-medium text-gray-400">I have specific furniture needs</span>
         </label>
         <div
           className="overflow-hidden transition-[max-height] duration-200 ease-out"
-          style={{ maxHeight: formData.accessibilityRequired ? "140px" : "0" }}
+          style={{ maxHeight: formData.furnitureNeedsEnabled ? "420px" : "0" }}
         >
-          <div className="pt-2">
-            <label htmlFor="accessibilityNotes" className="mb-1.5 block text-sm font-medium text-gray-500">
-              Accessibility Notes <span className="text-gray-500">(optional)</span>
-            </label>
-            <textarea
-              id="accessibilityNotes"
-              rows={2}
-              value={formData.accessibilityNotes ?? ""}
-              onChange={(e) => set("accessibilityNotes", e.target.value)}
-              className={textareaClass}
-              placeholder="e.g., step-free access, seating needs, proximity to elevator..."
-            />
+          <div className="pt-3 space-y-3">
+            <p className="text-sm text-gray-500">Select required furniture (rooms must match all selected)</p>
+            <div className="flex flex-wrap gap-2">
+              {furnitureOptions.map((label) => {
+                const isSelected = furnitureNeeds.includes(label);
+                return (
+                  <button
+                    key={label}
+                    type="button"
+                    onClick={() => toggleFurnitureNeed(label)}
+                    className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[#FFD100] focus:ring-offset-2 focus:ring-offset-[#1A1A1A] ${
+                      isSelected
+                        ? "border-2 border-[#FFD100] bg-[#FFD100]/20 text-[#FFD100]"
+                        : "border border-[#2A2A2A] bg-[#111111] text-gray-400 hover:border-[#FFD100]/50 hover:text-white"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
+      )}
 
+      {!directBooking && (
       <div className="grid gap-6 border-t border-[#2A2A2A] pt-6 sm:grid-cols-2">
         <BuildingButton
           value={formData.preferredBuilding ?? ""}
@@ -363,6 +401,7 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
           </select>
         </div>
       </div>
+      )}
 
       <div className="pt-4">
         <button
@@ -370,7 +409,7 @@ export function EventForm({ data, onChange, onSubmit, buildings }: EventFormProp
           disabled={!isValid}
           className="w-full rounded-xl bg-[#FFD100] px-6 py-4 text-lg font-semibold text-black shadow-lg transition-all duration-150 hover:bg-[#e6bc00] hover:shadow-[#FFD100]/25 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[#FFD100] sm:w-auto sm:min-w-[220px]"
         >
-          Find Available Rooms
+          {directBooking ? "Confirm Booking" : "Find Available Rooms"}
         </button>
       </div>
     </form>

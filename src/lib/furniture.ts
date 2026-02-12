@@ -1,24 +1,23 @@
 /**
- * Furniture code → friendly label mapping.
- * Used on room cards (short) and room details modal (code — label).
+ * Furniture code → full label mapping (internal only).
+ * UI must NEVER display codes (STC, FTSC, etc.) — only these labels.
  */
-
 export const FURNITURE_LABELS: Record<string, string> = {
-  FTLC: "Fixed tables with loose chairs",
-  FTSC: "Fixed tables with swivel chairs",
-  STC: "Standard tables and chairs",
-  FTA: "Fixed table with armchair",
-  LTA: "Loose table with armchair",
-  THA: "Theater armchairs",
-  MM: "Multimedia",
-  SEM: "Seminar",
+  FTLC: "Fixed Tables with Loose Chairs",
+  FTSC: "Fixed Tables with Swivel Chairs",
+  STC: "Standard Tables and Chairs",
+  FTA: "Fixed Table with Armchairs",
+  LTA: "Loose Tables with Armchairs",
+  THA: "Theatre Armchairs",
+  MM: "Multimedia Room",
+  SEM: "Seminar Layout",
 };
 
 /**
- * Format furniture string for display.
- * - short: friendly label(s) only, e.g. "Standard tables & chairs" or "Fixed tables with loose chairs; Seminar"
- * - full: code + label per part, e.g. "STC — Standard tables and chairs" or "FTLC — Fixed tables with loose chairs; SEM — Seminar"
- * Unknown codes show as "CODE (Unknown)".
+ * Returns display text only — no codes, no rawFeatureCode, no abbreviations.
+ * - short: labels joined with " • " for one line (e.g. "Standard Tables and Chairs" or "Fixed Tables with Loose Chairs • Seminar Layout")
+ * - full: same as short (labels only)
+ * Unknown codes render as "(Unknown)" only (code never shown).
  */
 export function formatFurniture(
   furniture: string | undefined
@@ -28,11 +27,20 @@ export function formatFurniture(
   }
   const raw = String(furniture).trim();
   const codes = raw.split("/").map((c) => c.trim()).filter(Boolean);
-  const parts: { code: string; label: string }[] = codes.map((code) => {
-    const label = FURNITURE_LABELS[code] ?? `${code} (Unknown)`;
-    return { code, label };
-  });
-  const short = parts.map((p) => p.label.replace(/\s+and\s+/g, " & ")).join("; ");
-  const full = parts.map((p) => `${p.code} — ${p.label}`).join("; ");
-  return { short, full };
+  const labels = codes.map((code) =>
+    FURNITURE_LABELS[code] ? FURNITURE_LABELS[code] : "(Unknown)"
+  );
+  const line = Array.from(new Set(labels)).join(" • ");
+  return { short: line, full: line };
+}
+
+/** For matching: returns list of label strings (no codes in output). */
+export function furnitureLabelsFromCodes(furniture: string | undefined): string[] {
+  if (!furniture || !String(furniture).trim()) return [];
+  const raw = String(furniture).trim();
+  const codes = raw.split("/").map((c) => c.trim()).filter(Boolean);
+  const labels = codes.map((code) =>
+    FURNITURE_LABELS[code] ? FURNITURE_LABELS[code] : "(Unknown)"
+  );
+  return Array.from(new Set(labels));
 }
